@@ -98,5 +98,10 @@ namespace Vistas
             else
                 picMostrarPassword.Image = Properties.Resources.ojo_cerrado;
         }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

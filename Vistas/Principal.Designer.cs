@@ -45,6 +45,8 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuStrip1.Font = new System.Drawing.Font("Calibri", 13F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuSistema,
             this.mnuClientes,
@@ -53,98 +55,105 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1019, 37);
+            this.menuStrip1.Size = new System.Drawing.Size(976, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // mnuSistema
             // 
-            this.mnuSistema.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.mnuSistema.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.mnuSistema.Name = "mnuSistema";
-            this.mnuSistema.Size = new System.Drawing.Size(103, 33);
+            this.mnuSistema.Size = new System.Drawing.Size(104, 33);
             this.mnuSistema.Text = "Sistema";
             // 
             // mnuClientes
             // 
             this.mnuClientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAltaCliente});
-            this.mnuClientes.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.mnuClientes.Font = new System.Drawing.Font("Calibri", 14F);
             this.mnuClientes.Name = "mnuClientes";
-            this.mnuClientes.Size = new System.Drawing.Size(103, 33);
+            this.mnuClientes.Size = new System.Drawing.Size(104, 33);
             this.mnuClientes.Text = "Clientes";
             // 
             // btnAltaCliente
             // 
             this.btnAltaCliente.Name = "btnAltaCliente";
-            this.btnAltaCliente.Size = new System.Drawing.Size(128, 34);
+            this.btnAltaCliente.Size = new System.Drawing.Size(152, 34);
             this.btnAltaCliente.Text = "Alta";
             this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
             // 
             // mnuProductos
             // 
+            this.mnuProductos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mnuProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAltaProductos});
-            this.mnuProductos.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.mnuProductos.Font = new System.Drawing.Font("Calibri", 14F);
             this.mnuProductos.Name = "mnuProductos";
-            this.mnuProductos.Size = new System.Drawing.Size(125, 33);
+            this.mnuProductos.Size = new System.Drawing.Size(124, 33);
             this.mnuProductos.Text = "Productos";
             // 
             // btnAltaProductos
             // 
             this.btnAltaProductos.Name = "btnAltaProductos";
-            this.btnAltaProductos.Size = new System.Drawing.Size(128, 34);
+            this.btnAltaProductos.Size = new System.Drawing.Size(152, 34);
             this.btnAltaProductos.Text = "Alta";
             this.btnAltaProductos.Click += new System.EventHandler(this.btnAltaProductos_Click);
             // 
             // mnuObrasSociales
             // 
+            this.mnuObrasSociales.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mnuObrasSociales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAltaObrasSociales});
-            this.mnuObrasSociales.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.mnuObrasSociales.Font = new System.Drawing.Font("Calibri", 14F);
             this.mnuObrasSociales.Name = "mnuObrasSociales";
-            this.mnuObrasSociales.Size = new System.Drawing.Size(169, 33);
+            this.mnuObrasSociales.Size = new System.Drawing.Size(167, 33);
             this.mnuObrasSociales.Text = "Obras Sociales";
             // 
             // btnAltaObrasSociales
             // 
             this.btnAltaObrasSociales.Name = "btnAltaObrasSociales";
-            this.btnAltaObrasSociales.Size = new System.Drawing.Size(128, 34);
+            this.btnAltaObrasSociales.Size = new System.Drawing.Size(152, 34);
             this.btnAltaObrasSociales.Text = "Alta";
             this.btnAltaObrasSociales.Click += new System.EventHandler(this.btnAltaObrasSociales_Click);
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(823, 372);
+            this.lblUsuario.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(849, 372);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(57, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(83, 27);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(823, 404);
+            this.lblRol.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.Location = new System.Drawing.Point(849, 404);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(29, 17);
+            this.lblRol.Size = new System.Drawing.Size(41, 27);
             this.lblRol.TabIndex = 2;
             this.lblRol.Text = "Rol";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(756, 372);
+            this.label1.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(753, 372);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
+            this.label1.Size = new System.Drawing.Size(91, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(784, 404);
+            this.label2.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(753, 404);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 17);
+            this.label2.Size = new System.Drawing.Size(47, 27);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol:";
             // 
@@ -152,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 446);
+            this.ClientSize = new System.Drawing.Size(976, 446);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRol);
