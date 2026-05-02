@@ -69,5 +69,10 @@ namespace Vistas
             this.Show();
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
     }
 }

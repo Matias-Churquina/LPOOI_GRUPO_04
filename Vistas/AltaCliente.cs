@@ -115,5 +115,10 @@ namespace Vistas
         {
 
         }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
