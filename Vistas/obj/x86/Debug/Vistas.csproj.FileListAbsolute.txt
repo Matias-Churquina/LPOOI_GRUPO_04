@@ -1,0 +1,71 @@
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\bin\Debug\Vistas.exe
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.exe
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.pdb
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.pdb
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.dll
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.pdb
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.pdb
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache

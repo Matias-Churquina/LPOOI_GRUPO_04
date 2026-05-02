@@ -1,0 +1,17 @@
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_individual\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Abigail\Downloads\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ResolveAssemblyReference.cache
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
+C:\LPOOI_GRUPO_04\LPOOI_GRUPO_04\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb
