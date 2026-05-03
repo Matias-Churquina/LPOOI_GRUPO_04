@@ -48,7 +48,7 @@
             this.txtOSTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOSTelefono.Name = "txtOSTelefono";
             this.txtOSTelefono.Size = new System.Drawing.Size(313, 34);
-            this.txtOSTelefono.TabIndex = 23;
+            this.txtOSTelefono.TabIndex = 8;
             // 
             // txtOSDireccion
             // 
@@ -57,7 +57,7 @@
             this.txtOSDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOSDireccion.Name = "txtOSDireccion";
             this.txtOSDireccion.Size = new System.Drawing.Size(313, 34);
-            this.txtOSDireccion.TabIndex = 22;
+            this.txtOSDireccion.TabIndex = 6;
             // 
             // txtOSRazonSocial
             // 
@@ -66,7 +66,7 @@
             this.txtOSRazonSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOSRazonSocial.Name = "txtOSRazonSocial";
             this.txtOSRazonSocial.Size = new System.Drawing.Size(313, 34);
-            this.txtOSRazonSocial.TabIndex = 21;
+            this.txtOSRazonSocial.TabIndex = 4;
             // 
             // txtOSCuit
             // 
@@ -75,7 +75,7 @@
             this.txtOSCuit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOSCuit.Name = "txtOSCuit";
             this.txtOSCuit.Size = new System.Drawing.Size(313, 34);
-            this.txtOSCuit.TabIndex = 20;
+            this.txtOSCuit.TabIndex = 2;
             // 
             // lblOSTelefono
             // 
@@ -84,7 +84,7 @@
             this.lblOSTelefono.Location = new System.Drawing.Point(254, 304);
             this.lblOSTelefono.Name = "lblOSTelefono";
             this.lblOSTelefono.Size = new System.Drawing.Size(97, 27);
-            this.lblOSTelefono.TabIndex = 17;
+            this.lblOSTelefono.TabIndex = 7;
             this.lblOSTelefono.Text = "Telefono:";
             // 
             // lblOSRazonSocial
@@ -94,7 +94,7 @@
             this.lblOSRazonSocial.Location = new System.Drawing.Point(254, 177);
             this.lblOSRazonSocial.Name = "lblOSRazonSocial";
             this.lblOSRazonSocial.Size = new System.Drawing.Size(131, 27);
-            this.lblOSRazonSocial.TabIndex = 16;
+            this.lblOSRazonSocial.TabIndex = 3;
             this.lblOSRazonSocial.Text = "Razon Social:";
             // 
             // lblOSDireccion
@@ -104,7 +104,7 @@
             this.lblOSDireccion.Location = new System.Drawing.Point(254, 239);
             this.lblOSDireccion.Name = "lblOSDireccion";
             this.lblOSDireccion.Size = new System.Drawing.Size(103, 27);
-            this.lblOSDireccion.TabIndex = 15;
+            this.lblOSDireccion.TabIndex = 5;
             this.lblOSDireccion.Text = "Direccion:";
             // 
             // lblOSCuit
@@ -114,7 +114,7 @@
             this.lblOSCuit.Location = new System.Drawing.Point(254, 112);
             this.lblOSCuit.Name = "lblOSCuit";
             this.lblOSCuit.Size = new System.Drawing.Size(60, 27);
-            this.lblOSCuit.TabIndex = 14;
+            this.lblOSCuit.TabIndex = 1;
             this.lblOSCuit.Text = "CUIT:";
             // 
             // btnAltaObraSocial
@@ -124,7 +124,7 @@
             this.btnAltaObraSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAltaObraSocial.Name = "btnAltaObraSocial";
             this.btnAltaObraSocial.Size = new System.Drawing.Size(119, 40);
-            this.btnAltaObraSocial.TabIndex = 13;
+            this.btnAltaObraSocial.TabIndex = 9;
             this.btnAltaObraSocial.Text = "Aceptar";
             this.btnAltaObraSocial.UseVisualStyleBackColor = true;
             this.btnAltaObraSocial.Click += new System.EventHandler(this.btnAltaObrasSociales_Click);
@@ -138,7 +138,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 40);
-            this.btnCancelar.TabIndex = 24;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -153,7 +153,7 @@
             this.lblAltaOS.Location = new System.Drawing.Point(373, 37);
             this.lblAltaOS.Name = "lblAltaOS";
             this.lblAltaOS.Size = new System.Drawing.Size(209, 31);
-            this.lblAltaOS.TabIndex = 25;
+            this.lblAltaOS.TabIndex = 0;
             this.lblAltaOS.Text = "Alta de Obra Social";
             // 
             // AltaObraSocial

@@ -10,13 +10,15 @@ namespace ClasesBase.Service
     {
         private static List<ObraSocial> oSociales = new List<ObraSocial>();
 
-        public static bool ExisteOSocial(string cuil)
+        private static bool ExisteOSocial(string cuil)
         {
             return oSociales.Any(os => os.OS_CUIT == cuil);
         }
 
         public static void AgregarOSocial(ObraSocial oSocial)
         {
+            if (ExisteOSocial(oSocial.OS_CUIT)) throw new Exception("El CUIT ya se encuentra registrado");
+
             oSociales.Add(oSocial);
         }
 

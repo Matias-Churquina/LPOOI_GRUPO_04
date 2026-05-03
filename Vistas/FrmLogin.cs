@@ -45,7 +45,7 @@ namespace Vistas
 
                 this.Hide();
                 frmPrincipal.ShowDialog();
-                this.Show();
+                //this.Show();
 
                 txtUsuario.Clear();
                 txtContrasenia.Clear();
@@ -59,8 +59,9 @@ namespace Vistas
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
 
+                txtUsuario.Clear();
                 txtContrasenia.Clear();
-                txtContrasenia.Focus();
+                txtUsuario.Focus();
             }
         }
 

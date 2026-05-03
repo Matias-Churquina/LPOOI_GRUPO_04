@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ClaseBase.Cliente">
-    <Position X="1.5" Y="1" Width="1.5" />
+  <Class Name="ClasesBase.Entity.Cliente">
+    <Position X="1" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAJAAAAAAIAAAAABAAAgAAAAEAAA=</HashCode>
-      <FileName>Cliente.cs</FileName>
+      <FileName>Entity\Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClaseBase.Producto">
-    <Position X="3.75" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEEAAAAAAAAABAAAAAAAQAAAAA=</HashCode>
-      <FileName>Producto.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ClaseBase.ObraSocial">
-    <Position X="4.5" Y="2.75" Width="1.5" />
+  <Class Name="ClasesBase.Entity.ObraSocial">
+    <Position X="4" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAgAAAAAAAgAAAAAIAAAA=</HashCode>
-      <FileName>ObraSocial.cs</FileName>
+      <FileName>Entity\ObraSocial.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClaseBase.Usuario">
-    <Position X="2.75" Y="4" Width="1.5" />
+  <Class Name="ClasesBase.Entity.Producto">
+    <Position X="1.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAIAKA=</HashCode>
-      <FileName>Usuario.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAEEAAAAAAAAABAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entity\Producto.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClaseBase.Rol">
-    <Position X="0.75" Y="2.75" Width="1.5" />
+  <Class Name="ClasesBase.Entity.Rol">
+    <Position X="4.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACA=</HashCode>
-      <FileName>Rol.cs</FileName>
+      <FileName>Entity\Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Entity.Usuario">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAEAAAAAAAAAAAACAAgAAAAAAAAAIAAA=</HashCode>
+      <FileName>Entity\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

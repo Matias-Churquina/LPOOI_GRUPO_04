@@ -20,48 +20,33 @@ namespace Vistas
 
         private void btnAltaCliente_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
-                return;
+            if (!ValidarCampos()) return;
 
-            if (ClienteService.ExisteCliente(txtClienteDNI.Text.Trim()))
+            try
             {
-                MessageBox.Show(
-                    "Ya existe un cliente con ese DNI.",
-                    "Atención",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                Cliente nuevo = new Cliente()
+                {
+                    Cli_DNI = txtClienteDNI.Text.Trim(),
+                    Cli_Apellido = txtClienteApellido.Text.Trim(),
+                    Cli_Nombre = txtClienteNombre.Text.Trim(),
+                    Cli_Direccion = txtClienteDireccion.Text.Trim(),
+                    OS_CUIT = txtClienteOS.Text,
+                    Cli_NroCarnet = txtClienteNroCarnet.Text.Trim()
+                };
 
-                txtClienteDNI.Focus();
-                return;
+                DialogResult respuesta = MessageBox.Show("¿Desea guardar el cliente?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (respuesta == DialogResult.Yes)
+                {
+                    ClienteService.AgregarCliente(nuevo);
+                    MessageBox.Show("Cliente registrado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarForm();   
+                }
             }
-
-            Cliente nuevo = new Cliente()
+            catch (Exception ex)
             {
-                Cli_DNI = txtClienteDNI.Text.Trim(),
-                Cli_Apellido = txtClienteApellido.Text.Trim(),
-                Cli_Nombre = txtClienteNombre.Text.Trim(),
-                Cli_Direccion = txtClienteDireccion.Text.Trim(),
-                OS_CUIT = txtClienteOS.Text,
-                Cli_NroCarnet = txtClienteNroCarnet.Text.Trim()
-            };
-
-            DialogResult respuesta = MessageBox.Show(
-                "¿Desea guardar el cliente?",
-                "Confirmación",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.Yes)
-            {
-                ClienteService.AgregarCliente(nuevo);
-
-                MessageBox.Show(
-                    "Cliente registrado correctamente.",
-                    "Información",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-                this.Close();
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtClienteDNI.Clear();
+                txtClienteDNI.Focus();
             }
         }
 
@@ -83,6 +68,15 @@ namespace Vistas
             }
 
             return true;
+        }
+        private void LimpiarForm()
+        {
+            txtClienteDNI.Clear();
+            txtClienteDireccion.Clear();
+            txtClienteApellido.Clear();
+            txtClienteNombre.Clear();
+            txtClienteNroCarnet.Clear();
+            txtClienteOS.Clear();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

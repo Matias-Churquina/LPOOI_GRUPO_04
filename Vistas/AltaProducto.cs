@@ -20,8 +20,7 @@ namespace Vistas
 
         private void btnAltaProductos_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
-                return;
+            if (!ValidarCampos()) return;
 
             float precio;
             if (!float.TryParse(txtProdPrecio.Text.Trim(), out precio))
@@ -36,44 +35,31 @@ namespace Vistas
                 return;
             }
 
-            if (ProductoService.existeProducto(txtProdCodigo.Text.Trim()))
+            try
             {
-                MessageBox.Show(
-                    "Ya existe un producto con este codigo.",
-                    "Atención",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                Producto nuevoProducto = new Producto()
+                {
+                    Prod_Codigo = txtProdCodigo.Text.Trim(),
+                    Prod_Categoria = txtProdCategoria.Text.Trim(),
+                    Prod_Descripcion = txtProdDescripcion.Text.Trim(),
+                    Prod_Precio = precio
+                };
 
-                txtProdCodigo.Focus();
-                return;
+                DialogResult respuesta = MessageBox.Show("¿Desea guardar el producto?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    ProductoService.AgregarProducto(nuevoProducto);
+
+                    MessageBox.Show("Producto registrado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarForm();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            Producto nuevoProducto = new Producto()
-            {
-                Prod_Codigo = txtProdCodigo.Text.Trim(),
-                Prod_Categoria = txtProdCategoria.Text.Trim(),
-                Prod_Descripcion = txtProdDescripcion.Text.Trim(),
-                Prod_Precio = precio
-            };
-
-            DialogResult respuesta = MessageBox.Show(
-                "¿Desea guardar el producto?",
-                "Confirmación",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.Yes)
-            {
-                ProductoService.AgregarProducto(nuevoProducto);
-
-                MessageBox.Show(
-                    "Producto registrado correctamente.",
-                    "Información",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-                this.Close();
-            }
         }
 
         private bool ValidarCampos()
@@ -95,6 +81,13 @@ namespace Vistas
             }
 
             return true;
+        }
+        private void LimpiarForm()
+        {
+            txtProdCodigo.Clear();
+            txtProdCategoria.Clear();
+            txtProdDescripcion.Clear();
+            txtProdPrecio.Clear();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
