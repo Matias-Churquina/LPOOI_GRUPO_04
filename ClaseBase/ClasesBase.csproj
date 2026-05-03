@@ -42,9 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Entity\Cliente.cs" />
-    <Compile Include="Datos.cs" />
     <Compile Include="Entity\ObraSocial.cs" />
     <Compile Include="Entity\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -20,46 +20,32 @@ namespace Vistas
 
         private void btnAltaObrasSociales_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
-                return;
+            if (!ValidarCampos()) return;
 
-            if (ObraSocialService.ExisteOSocial(txtOSCuit.Text.Trim()))
+            try
             {
-                MessageBox.Show(
-                    "Ya existe una Obra Social con este CUIT.",
-                    "Atención",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                ObraSocial nuevaObraSocial = new ObraSocial()
+                {
+                    OS_CUIT = txtOSCuit.Text.Trim(),
+                    OS_RazonSocial = txtOSRazonSocial.Text.Trim(),
+                    OS_Direccion = txtOSDireccion.Text.Trim(),
+                    OS_Telefono = txtOSTelefono.Text.Trim()
+                };
 
-                txtOSCuit.Focus();
-                return;
+                DialogResult respuesta = MessageBox.Show("¿Desea guardar la obra social?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    ObraSocialService.AgregarOSocial(nuevaObraSocial);
+                    MessageBox.Show("Obra social registrada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarForm();
+                }
             }
-
-            ObraSocial nuevaObraSocial = new ObraSocial()
+            catch (Exception ex)
             {
-                OS_CUIT = txtOSCuit.Text.Trim(),
-                OS_RazonSocial = txtOSRazonSocial.Text.Trim(),
-                OS_Direccion = txtOSDireccion.Text.Trim(),
-                OS_Telefono = txtOSTelefono.Text.Trim()
-            };
-
-            DialogResult respuesta = MessageBox.Show(
-                "¿Desea guardar la obra social?",
-                "Confirmación",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (respuesta == DialogResult.Yes)
-            {
-                ObraSocialService.AgregarOSocial(nuevaObraSocial);
-
-                MessageBox.Show(
-                    "Obra social registrada correctamente.",
-                    "Información",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-                this.Close();
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtOSCuit.Clear();
+                txtOSCuit.Focus();
             }
         }
 
@@ -82,6 +68,13 @@ namespace Vistas
             }
 
             return true;
+        }
+        private void LimpiarForm()
+        {
+            txtOSCuit.Clear();
+            txtOSDireccion.Clear();
+            txtOSRazonSocial.Clear();
+            txtOSTelefono.Clear();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

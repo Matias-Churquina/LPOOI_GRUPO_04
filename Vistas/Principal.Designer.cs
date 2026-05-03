@@ -40,6 +40,7 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,11 +52,12 @@
             this.mnuSistema,
             this.mnuClientes,
             this.mnuProductos,
-            this.mnuObrasSociales});
+            this.mnuObrasSociales,
+            this.mnuSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(976, 37);
+            this.menuStrip1.Size = new System.Drawing.Size(1014, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -79,7 +81,7 @@
             // btnAltaCliente
             // 
             this.btnAltaCliente.Name = "btnAltaCliente";
-            this.btnAltaCliente.Size = new System.Drawing.Size(152, 34);
+            this.btnAltaCliente.Size = new System.Drawing.Size(126, 34);
             this.btnAltaCliente.Text = "Alta";
             this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
             // 
@@ -143,7 +145,7 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(753, 372);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 28);
+            this.label1.Size = new System.Drawing.Size(89, 27);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario:";
             // 
@@ -157,11 +159,18 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol:";
             // 
+            // mnuSalir
+            // 
+            this.mnuSalir.Name = "mnuSalir";
+            this.mnuSalir.Size = new System.Drawing.Size(63, 33);
+            this.mnuSalir.Text = "Salir";
+            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 446);
+            this.ClientSize = new System.Drawing.Size(1014, 446);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRol);
@@ -193,6 +202,7 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem mnuSalir;
     }
 }
 

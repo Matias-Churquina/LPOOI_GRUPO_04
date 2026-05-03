@@ -52,7 +52,7 @@
             this.btnAltaCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAltaCliente.Name = "btnAltaCliente";
             this.btnAltaCliente.Size = new System.Drawing.Size(111, 39);
-            this.btnAltaCliente.TabIndex = 0;
+            this.btnAltaCliente.TabIndex = 13;
             this.btnAltaCliente.Text = "Aceptar";
             this.btnAltaCliente.UseVisualStyleBackColor = true;
             this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
@@ -65,7 +65,7 @@
             this.lblClienteDNI.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClienteDNI.Location = new System.Drawing.Point(242, 108);
             this.lblClienteDNI.Name = "lblClienteDNI";
-            this.lblClienteDNI.Size = new System.Drawing.Size(53, 28);
+            this.lblClienteDNI.Size = new System.Drawing.Size(52, 27);
             this.lblClienteDNI.TabIndex = 1;
             this.lblClienteDNI.Text = "DNI:";
             // 
@@ -75,8 +75,8 @@
             this.lblClienteNombre.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClienteNombre.Location = new System.Drawing.Point(242, 223);
             this.lblClienteNombre.Name = "lblClienteNombre";
-            this.lblClienteNombre.Size = new System.Drawing.Size(94, 28);
-            this.lblClienteNombre.TabIndex = 2;
+            this.lblClienteNombre.Size = new System.Drawing.Size(93, 27);
+            this.lblClienteNombre.TabIndex = 5;
             this.lblClienteNombre.Text = "Nombre:";
             // 
             // lblClienteApellido
@@ -85,7 +85,7 @@
             this.lblClienteApellido.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClienteApellido.Location = new System.Drawing.Point(242, 165);
             this.lblClienteApellido.Name = "lblClienteApellido";
-            this.lblClienteApellido.Size = new System.Drawing.Size(93, 28);
+            this.lblClienteApellido.Size = new System.Drawing.Size(93, 27);
             this.lblClienteApellido.TabIndex = 3;
             this.lblClienteApellido.Text = "Apellido:";
             // 
@@ -95,8 +95,8 @@
             this.lblClienteDireccion.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClienteDireccion.Location = new System.Drawing.Point(242, 281);
             this.lblClienteDireccion.Name = "lblClienteDireccion";
-            this.lblClienteDireccion.Size = new System.Drawing.Size(105, 28);
-            this.lblClienteDireccion.TabIndex = 4;
+            this.lblClienteDireccion.Size = new System.Drawing.Size(103, 27);
+            this.lblClienteDireccion.TabIndex = 7;
             this.lblClienteDireccion.Text = "Direccion:";
             // 
             // lblClienteOS
@@ -105,8 +105,8 @@
             this.lblClienteOS.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClienteOS.Location = new System.Drawing.Point(242, 336);
             this.lblClienteOS.Name = "lblClienteOS";
-            this.lblClienteOS.Size = new System.Drawing.Size(91, 28);
-            this.lblClienteOS.TabIndex = 5;
+            this.lblClienteOS.Size = new System.Drawing.Size(90, 27);
+            this.lblClienteOS.TabIndex = 9;
             this.lblClienteOS.Text = "OS CUIT:";
             // 
             // lblClienteNroCarnet
@@ -115,8 +115,8 @@
             this.lblClienteNroCarnet.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClienteNroCarnet.Location = new System.Drawing.Point(242, 389);
             this.lblClienteNroCarnet.Name = "lblClienteNroCarnet";
-            this.lblClienteNroCarnet.Size = new System.Drawing.Size(136, 28);
-            this.lblClienteNroCarnet.TabIndex = 6;
+            this.lblClienteNroCarnet.Size = new System.Drawing.Size(133, 27);
+            this.lblClienteNroCarnet.TabIndex = 11;
             this.lblClienteNroCarnet.Text = "N° de Carnet:";
             // 
             // txtClienteDNI
@@ -126,7 +126,7 @@
             this.txtClienteDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClienteDNI.Name = "txtClienteDNI";
             this.txtClienteDNI.Size = new System.Drawing.Size(313, 34);
-            this.txtClienteDNI.TabIndex = 7;
+            this.txtClienteDNI.TabIndex = 2;
             // 
             // txtClienteApellido
             // 
@@ -135,7 +135,7 @@
             this.txtClienteApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClienteApellido.Name = "txtClienteApellido";
             this.txtClienteApellido.Size = new System.Drawing.Size(313, 34);
-            this.txtClienteApellido.TabIndex = 8;
+            this.txtClienteApellido.TabIndex = 4;
             // 
             // txtClienteNombre
             // 
@@ -144,7 +144,7 @@
             this.txtClienteNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClienteNombre.Name = "txtClienteNombre";
             this.txtClienteNombre.Size = new System.Drawing.Size(313, 34);
-            this.txtClienteNombre.TabIndex = 9;
+            this.txtClienteNombre.TabIndex = 6;
             // 
             // txtClienteDireccion
             // 
@@ -153,7 +153,7 @@
             this.txtClienteDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClienteDireccion.Name = "txtClienteDireccion";
             this.txtClienteDireccion.Size = new System.Drawing.Size(313, 34);
-            this.txtClienteDireccion.TabIndex = 10;
+            this.txtClienteDireccion.TabIndex = 8;
             // 
             // txtClienteOS
             // 
@@ -162,7 +162,7 @@
             this.txtClienteOS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClienteOS.Name = "txtClienteOS";
             this.txtClienteOS.Size = new System.Drawing.Size(313, 34);
-            this.txtClienteOS.TabIndex = 11;
+            this.txtClienteOS.TabIndex = 10;
             // 
             // txtClienteNroCarnet
             // 
@@ -180,7 +180,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(113, 39);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -195,7 +195,7 @@
             this.lblAltaCliente.Location = new System.Drawing.Point(396, 40);
             this.lblAltaCliente.Name = "lblAltaCliente";
             this.lblAltaCliente.Size = new System.Drawing.Size(167, 31);
-            this.lblAltaCliente.TabIndex = 14;
+            this.lblAltaCliente.TabIndex = 0;
             this.lblAltaCliente.Text = "Alta de Cliente";
             this.lblAltaCliente.Click += new System.EventHandler(this.lblLogin_Click);
             // 

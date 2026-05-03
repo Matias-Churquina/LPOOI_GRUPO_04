@@ -10,13 +10,16 @@ namespace ClasesBase.Service
     {
         private static List<Producto> productos = new List<Producto>();
 
-        public static bool existeProducto(string codigo)
+        private static bool existeProducto(string codigo)
         {
             return productos.Any(p => p.Prod_Codigo == codigo);
         }
 
         public static void AgregarProducto(Producto producto)
         {
+            if (producto.Prod_Precio <= 0) throw new Exception("El precio debe ser mayor a cero.");
+            if (existeProducto(producto.Prod_Codigo)) throw new Exception("El codigo ya se encuentra registrado");
+
             productos.Add(producto);
         }
 

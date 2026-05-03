@@ -60,18 +60,28 @@ namespace Vistas
             this.Show();
         }
 
+
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
         private void btnAltaObrasSociales_Click(object sender, EventArgs e)
         {
             AltaObraSocial frm = new AltaObraSocial();
-            
+
             this.Hide();
             frm.ShowDialog();
             this.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void mnuSalir_Click(object sender, EventArgs e)
         {
+            DialogResult respuesta = MessageBox.Show(
+                "¿Desea salir de la aplicación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (respuesta == DialogResult.Yes) Application.Exit();
         }
 
     }
