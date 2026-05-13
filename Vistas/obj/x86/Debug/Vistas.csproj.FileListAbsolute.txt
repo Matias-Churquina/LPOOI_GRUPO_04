@@ -69,3 +69,4 @@ C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GR
 C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
 C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe.config
