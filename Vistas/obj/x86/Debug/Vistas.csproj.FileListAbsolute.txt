@@ -70,3 +70,20 @@ C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GR
 C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\40986\Documents\Visual Studio 2010\Projects\LPOOI_GRUPO_04 (4)\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\bin\Debug\optica.mdf
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\bin\Debug\optica_log.LDF
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.pdb
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
