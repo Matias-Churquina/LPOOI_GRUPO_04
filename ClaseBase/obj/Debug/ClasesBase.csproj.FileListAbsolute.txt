@@ -20,3 +20,4 @@ C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\ClaseBase\bin\Debug\Cla
 C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb
 C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\Abigail\Documents\3° APU\LPOO I\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll.config
