@@ -105,3 +105,22 @@ C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\Vist
 C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
 C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\bin\Debug\optica.mdf
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\bin\Debug\optica_log.LDF
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.dll
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\bin\Debug\ClaseBase.pdb
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FormUsuario.resources
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Principal.resources
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmRegVentas.resources

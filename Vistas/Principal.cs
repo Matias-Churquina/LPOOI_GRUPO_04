@@ -91,5 +91,16 @@ namespace Vistas
             frm.ShowDialog();
         }
 
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void regVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegVentas frm = new FrmRegVentas();
+            frm.ShowDialog();
+        }
+
     }
 }
