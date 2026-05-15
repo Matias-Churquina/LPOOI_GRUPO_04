@@ -11,20 +11,20 @@ namespace ClasesBase.Entity
         public string Usu_NombreUsuario { get; set; }
         public string Usu_Contrasenia { get; set; }
         public string Usu_ApellidoNombre { get; set; }
-        public Rol Rol { get; set; }
+        public int Usu_Rol { get; set; }
 
         public Usuario()
         {
         }
 
         public Usuario(int id, string usuario, string contrasenia,
-                       string nombre, Rol rol)
+                       string nombre, int rol)
         {
             Usu_ID = id;
             Usu_NombreUsuario = usuario;
             Usu_Contrasenia = contrasenia;
             Usu_ApellidoNombre = nombre;
-            Rol = rol;
+            Usu_Rol = rol;
         }
     }
 }

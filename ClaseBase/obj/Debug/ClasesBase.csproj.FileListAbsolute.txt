@@ -29,3 +29,11 @@ C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\ClaseBase\bin\Debug\Clas
 C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\holac\OneDrive\Escritorio\lpolu\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\bin\Debug\optica.mdf
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\bin\Debug\optica_log.LDF
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\40986\Documents\Visual Studio 2010\Projects\TP_LPOO\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb

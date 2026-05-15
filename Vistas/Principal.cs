@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using ClasesBase.Entity;
+using ClasesBase.Service;
 
 namespace Vistas
 {
@@ -18,14 +19,14 @@ namespace Vistas
         private void Principal_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = usuarioLogueado.Usu_ApellidoNombre;
-            lblRol.Text = usuarioLogueado.Rol.Rol_Descripcion;
+            lblRol.Text = RolService.getDescripcion(usuarioLogueado.Usu_Rol);
 
             AsignarPermisos();
         }
 
         private void AsignarPermisos()
         {
-            switch (usuarioLogueado.Rol.Rol_Descripcion)
+            switch (RolService.getDescripcion(usuarioLogueado.Usu_Rol))
             {
                 case "Administrador":
                     break;
@@ -82,6 +83,12 @@ namespace Vistas
                 "¿Desea salir de la aplicación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (respuesta == DialogResult.Yes) Application.Exit();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FormUsuario frm = new FormUsuario();
+            frm.ShowDialog();
         }
 
     }

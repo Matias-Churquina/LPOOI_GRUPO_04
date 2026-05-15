@@ -36,11 +36,13 @@
             this.btnAltaProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAltaObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             this.mnuClientes,
             this.mnuProductos,
             this.mnuObrasSociales,
+            this.usuariosToolStripMenuItem,
             this.mnuSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -98,7 +101,7 @@
             // btnAltaProductos
             // 
             this.btnAltaProductos.Name = "btnAltaProductos";
-            this.btnAltaProductos.Size = new System.Drawing.Size(152, 34);
+            this.btnAltaProductos.Size = new System.Drawing.Size(126, 34);
             this.btnAltaProductos.Text = "Alta";
             this.btnAltaProductos.Click += new System.EventHandler(this.btnAltaProductos_Click);
             // 
@@ -118,6 +121,29 @@
             this.btnAltaObrasSociales.Size = new System.Drawing.Size(152, 34);
             this.btnAltaObrasSociales.Text = "Alta";
             this.btnAltaObrasSociales.Click += new System.EventHandler(this.btnAltaObrasSociales_Click);
+            // 
+            // mnuSalir
+            // 
+            this.mnuSalir.Name = "mnuSalir";
+            this.mnuSalir.Size = new System.Drawing.Size(63, 33);
+            this.mnuSalir.Text = "Salir";
+            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnUsuarios});
+            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 14F);
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(110, 33);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(211, 34);
+            this.btnUsuarios.Text = "Op. Usuarios";
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // lblUsuario
             // 
@@ -159,13 +185,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol:";
             // 
-            // mnuSalir
-            // 
-            this.mnuSalir.Name = "mnuSalir";
-            this.mnuSalir.Size = new System.Drawing.Size(63, 33);
-            this.mnuSalir.Text = "Salir";
-            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,6 +222,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem mnuSalir;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnUsuarios;
     }
 }
 
