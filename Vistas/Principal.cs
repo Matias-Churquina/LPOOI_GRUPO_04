@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using ClasesBase.Entity;
@@ -26,19 +26,40 @@ namespace Vistas
 
         private void AsignarPermisos()
         {
+            // Habilitar todo por defecto
+            mnuClientes.Enabled = true;
+            btnAltaCliente.Enabled = true;
+            mnuProductos.Enabled = true;
+            btnAltaProductos.Enabled = true;
+            mnuObrasSociales.Enabled = true;
+            btnAltaObrasSociales.Enabled = true;
+            usuariosToolStripMenuItem.Enabled = true;
+            btnUsuarios.Enabled = true;
+            ventasToolStripMenuItem.Enabled = true;
+            regVentasToolStripMenuItem.Enabled = true;
+
             switch (RolService.getDescripcion(usuarioLogueado.Usu_Rol))
             {
                 case "Administrador":
+                    // Acceso a Usuarios y Productos únicamente
+                    mnuClientes.Enabled = false;
+                    btnAltaCliente.Enabled = false;
+                    mnuObrasSociales.Enabled = false;
+                    btnAltaObrasSociales.Enabled = false;
+                    ventasToolStripMenuItem.Enabled = false;
+                    regVentasToolStripMenuItem.Enabled = false;
                     break;
 
                 case "Operador":
-                    btnAltaObrasSociales.Enabled = false;
+                    // Acceso a Clientes y Ventas únicamente
+                    mnuProductos.Enabled = false;
+                    btnAltaProductos.Enabled = false;
+                    usuariosToolStripMenuItem.Enabled = false;
+                    btnUsuarios.Enabled = false;
                     break;
 
                 case "Auditor":
-                    btnAltaCliente.Enabled = false;
-                    btnAltaProductos.Enabled = false;
-                    btnAltaObrasSociales.Enabled = false;
+                    // Sin restricciones (acceso completo a todo)
                     break;
             }
         }
