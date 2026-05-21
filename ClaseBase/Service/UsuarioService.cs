@@ -11,23 +11,17 @@ namespace ClasesBase.Service
 {
     public static class UsuarioService
     {
-        private static List<Usuario> usuarios =
-            new List<Usuario>();
-
-        static UsuarioService()
-        {
-            Rol admin = RolService.roles[0];
-            Rol operador = RolService.roles[1];
-            Rol auditor = RolService.roles[2];
-
-            usuarios.Add(new Usuario(1, "Juan", "123", "Juan Perez", admin.Rol_Codigo));
-            usuarios.Add(new Usuario(2, "Maria", "456", "Maria Gomez", operador.Rol_Codigo));
-            usuarios.Add(new Usuario(2, "Sofia", "890", "Sofia Martinez", auditor.Rol_Codigo));
-        }
 
         public static Usuario ValidarLogin(string username, string password)
         {
-            return usuarios.FirstOrDefault(u =>
+            DataTable usuarios = list_usuarios();
+            Usuario[] oUsuarios=usuarios.AsEnumerable().Select(row=>new Usuario{
+                Usu_NombreUsuario = row.Field<string>("Usuario"),
+                Usu_Contrasenia = row.Field<string>("Contraseña"),
+                Usu_ApellidoNombre = row.Field<string>("Apellido y Nombre"),
+                Usu_Rol = row.Field<int>("RolCode")
+            }).ToArray();
+            return oUsuarios.FirstOrDefault(u =>
                 u.Usu_NombreUsuario == username &&
                 u.Usu_Contrasenia == password);
         }
@@ -78,6 +72,7 @@ namespace ClasesBase.Service
             cmd.CommandText += " Usu_NombreUsuario as 'Usuario', ";
             cmd.CommandText += " Usu_Contrasenia as 'Contraseña', ";
             cmd.CommandText += " Usu_ApellidoNombre as 'Apellido y Nombre', ";
+            cmd.CommandText += " U.Rol_Codigo as 'RolCode', ";
             cmd.CommandText += " Rol_Descripcion as 'Rol' ";
             cmd.CommandText += " FROM Usuario as U";
             cmd.CommandText += " LEFT JOIN Roles as R ON (R.Rol_Codigo=U.Rol_Codigo)";
