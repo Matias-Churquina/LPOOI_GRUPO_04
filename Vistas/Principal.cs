@@ -29,6 +29,7 @@ namespace Vistas
             // Habilitar todo por defecto
             mnuClientes.Enabled = true;
             btnAltaCliente.Enabled = true;
+            btnGestionClientes.Enabled = true;
             mnuProductos.Enabled = true;
             btnAltaProductos.Enabled = true;
             mnuObrasSociales.Enabled = true;
@@ -44,6 +45,7 @@ namespace Vistas
                     // Acceso a Usuarios y Productos únicamente
                     mnuClientes.Enabled = false;
                     btnAltaCliente.Enabled = false;
+                    btnGestionClientes.Enabled = false;
                     mnuObrasSociales.Enabled = false;
                     btnAltaObrasSociales.Enabled = false;
                     ventasToolStripMenuItem.Enabled = false;
@@ -121,6 +123,15 @@ namespace Vistas
         {
             FrmRegVentas frm = new FrmRegVentas();
             frm.ShowDialog();
+        }
+
+        private void btnGestionClientes_Click(object sender, EventArgs e)
+        {
+            FrmGestionClientes frm = new FrmGestionClientes();
+
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
     }
