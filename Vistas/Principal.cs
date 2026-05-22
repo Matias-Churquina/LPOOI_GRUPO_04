@@ -39,6 +39,7 @@ namespace Vistas
                     btnAltaCliente.Enabled = false;
                     btnAltaProductos.Enabled = false;
                     btnAltaObrasSociales.Enabled = false;
+                    btnGestionClientes.Enabled = false;
                     break;
             }
         }
@@ -100,6 +101,15 @@ namespace Vistas
         {
             FrmRegVentas frm = new FrmRegVentas();
             frm.ShowDialog();
+        }
+
+        private void btnGestionClientes_Click(object sender, EventArgs e)
+        {
+            FrmGestionClientes frm = new FrmGestionClientes();
+
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
     }
