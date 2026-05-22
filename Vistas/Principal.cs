@@ -26,7 +26,6 @@ namespace Vistas
 
         private void AsignarPermisos()
         {
-            // Habilitar todo por defecto
             mnuClientes.Enabled = true;
             btnAltaCliente.Enabled = true;
             btnGestionClientes.Enabled = true;
@@ -42,7 +41,6 @@ namespace Vistas
             switch (RolService.getDescripcion(usuarioLogueado.Usu_Rol))
             {
                 case "Administrador":
-                    // Acceso a Usuarios y Productos únicamente
                     mnuClientes.Enabled = false;
                     btnAltaCliente.Enabled = false;
                     btnGestionClientes.Enabled = false;
@@ -53,7 +51,6 @@ namespace Vistas
                     break;
 
                 case "Operador":
-                    // Acceso a Clientes y Ventas únicamente
                     mnuProductos.Enabled = false;
                     btnAltaProductos.Enabled = false;
                     usuariosToolStripMenuItem.Enabled = false;
@@ -61,7 +58,6 @@ namespace Vistas
                     break;
 
                 case "Auditor":
-                    // Sin restricciones (acceso completo a todo)
                     break;
             }
         }

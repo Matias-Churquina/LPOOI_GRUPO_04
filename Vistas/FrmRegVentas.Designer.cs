@@ -38,6 +38,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource1)).BeginInit();
@@ -61,6 +62,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(302, 28);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // opticaDataSet
             // 
@@ -132,6 +134,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle de Venta";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(10, 265);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.TabIndex = 3;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -147,6 +157,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(100, 26);
             this.numericUpDown1.TabIndex = 3;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged_1);
             // 
             // label5
             // 
@@ -181,6 +192,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(302, 28);
             this.comboBox2.TabIndex = 3;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
             // 
             // label3
             // 
@@ -191,23 +203,27 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Producto";
             // 
-            // textBox2
+            // button1
             // 
-            this.textBox2.Location = new System.Drawing.Point(10, 265);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 3;
+            this.button1.Location = new System.Drawing.Point(376, 536);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 38);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Registrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmRegVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 538);
+            this.ClientSize = new System.Drawing.Size(527, 586);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmRegVentas";
             this.Text = "FrmRegVentas";
+            this.Load += new System.EventHandler(this.FrmRegVentas_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource1)).EndInit();
@@ -239,5 +255,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
