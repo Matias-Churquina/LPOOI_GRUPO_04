@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using ClasesBase.Entity;
@@ -26,20 +26,38 @@ namespace Vistas
 
         private void AsignarPermisos()
         {
+            mnuClientes.Enabled = true;
+            btnAltaCliente.Enabled = true;
+            btnGestionClientes.Enabled = true;
+            mnuProductos.Enabled = true;
+            btnAltaProductos.Enabled = true;
+            mnuObrasSociales.Enabled = true;
+            btnAltaObrasSociales.Enabled = true;
+            usuariosToolStripMenuItem.Enabled = true;
+            btnUsuarios.Enabled = true;
+            ventasToolStripMenuItem.Enabled = true;
+            regVentasToolStripMenuItem.Enabled = true;
+
             switch (RolService.getDescripcion(usuarioLogueado.Usu_Rol))
             {
                 case "Administrador":
+                    mnuClientes.Enabled = false;
+                    btnAltaCliente.Enabled = false;
+                    btnGestionClientes.Enabled = false;
+                    mnuObrasSociales.Enabled = false;
+                    btnAltaObrasSociales.Enabled = false;
+                    ventasToolStripMenuItem.Enabled = false;
+                    regVentasToolStripMenuItem.Enabled = false;
                     break;
 
                 case "Operador":
-                    btnAltaObrasSociales.Enabled = false;
+                    mnuProductos.Enabled = false;
+                    btnAltaProductos.Enabled = false;
+                    usuariosToolStripMenuItem.Enabled = false;
+                    btnUsuarios.Enabled = false;
                     break;
 
                 case "Auditor":
-                    btnAltaCliente.Enabled = false;
-                    btnAltaProductos.Enabled = false;
-                    btnAltaObrasSociales.Enabled = false;
-                    btnGestionClientes.Enabled = false;
                     break;
             }
         }
