@@ -58,6 +58,10 @@ namespace Vistas
                     break;
 
                 case "Auditor":
+                    btnAltaCliente.Enabled = false;
+                    btnAltaProductos.Enabled = false;
+                    btnAltaObrasSociales.Enabled = false;
+                    btnGestionClientes.Enabled = false;
                     break;
             }
         }
