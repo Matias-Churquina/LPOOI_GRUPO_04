@@ -71,8 +71,8 @@ namespace ClasesBase.Service
                 "D.Det_Total AS 'Total' " +
                 "FROM Venta V " +
                 "INNER JOIN VentaDetalle D ON V.Ven_Nro = D.Ven_Nro " +
-                "INNER JOIN Cliente C ON V.Cli_DNI = C.Cli_DNI " +
-                "INNER JOIN Producto P ON D.Prod_Codigo = P.Prod_Codigo", cnn);
+                "LEFT JOIN Cliente C ON V.Cli_DNI = C.Cli_DNI " +
+                "LEFT JOIN Producto P ON D.Prod_Codigo = P.Prod_Codigo", cnn);
 
             DataTable dt = new DataTable();
             try
@@ -100,8 +100,8 @@ namespace ClasesBase.Service
                            "D.Det_Total AS 'Total' " +
                            "FROM Venta V " +
                            "INNER JOIN VentaDetalle D ON V.Ven_Nro = D.Ven_Nro " +
-                           "INNER JOIN Cliente C ON V.Cli_DNI = C.Cli_DNI " +
-                           "INNER JOIN Producto P ON D.Prod_Codigo = P.Prod_Codigo WHERE 1=1";
+                           "LEFT JOIN Cliente C ON V.Cli_DNI = C.Cli_DNI " +
+                           "LEFT JOIN Producto P ON D.Prod_Codigo = P.Prod_Codigo WHERE 1=1";
 
             if (filtrarCliente)
             {
