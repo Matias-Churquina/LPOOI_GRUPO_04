@@ -55,5 +55,86 @@ namespace ClasesBase.Service
                 cnn.Close();
             }
         }
+
+        public static DataTable list_ventas()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SELECT V.Ven_Nro AS 'Numero Venta', " +
+                "V.Ven_Fecha AS 'Fecha', " +
+                "V.Cli_DNI AS 'DNI Cliente', " +
+                "C.Cli_Apellido + ', ' + C.Cli_Nombre AS 'Cliente', " +
+                "D.Prod_Codigo AS 'Codigo Producto', " +
+                "P.Prod_Descripcion AS 'Producto', " +
+                "D.Det_Precio AS 'Precio', " +
+                "D.Det_Cantidad AS 'Cantidad', " +
+                "D.Det_Total AS 'Total' " +
+                "FROM Venta V " +
+                "INNER JOIN VentaDetalle D ON V.Ven_Nro = D.Ven_Nro " +
+                "INNER JOIN Cliente C ON V.Cli_DNI = C.Cli_DNI " +
+                "INNER JOIN Producto P ON D.Prod_Codigo = P.Prod_Codigo", cnn);
+
+            DataTable dt = new DataTable();
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al listar ventas: " + ex.Message, "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+
+        public static DataTable list_ventas_filtradas(string dniCliente, DateTime desde, DateTime hasta, bool filtrarCliente, bool filtrarFechas)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+            string query = "SELECT V.Ven_Nro AS 'Numero Venta', " +
+                           "V.Ven_Fecha AS 'Fecha', " +
+                           "V.Cli_DNI AS 'DNI Cliente', " +
+                           "C.Cli_Apellido + ', ' + C.Cli_Nombre AS 'Cliente', " +
+                           "D.Prod_Codigo AS 'Codigo Producto', " +
+                           "P.Prod_Descripcion AS 'Producto', " +
+                           "D.Det_Precio AS 'Precio', " +
+                           "D.Det_Cantidad AS 'Cantidad', " +
+                           "D.Det_Total AS 'Total' " +
+                           "FROM Venta V " +
+                           "INNER JOIN VentaDetalle D ON V.Ven_Nro = D.Ven_Nro " +
+                           "INNER JOIN Cliente C ON V.Cli_DNI = C.Cli_DNI " +
+                           "INNER JOIN Producto P ON D.Prod_Codigo = P.Prod_Codigo WHERE 1=1";
+
+            if (filtrarCliente)
+            {
+                query += " AND V.Cli_DNI = @dni";
+            }
+            if (filtrarFechas)
+            {
+                query += " AND V.Ven_Fecha >= @desde AND V.Ven_Fecha <= @hasta";
+            }
+
+            SqlCommand cmd = new SqlCommand(query, cnn);
+            if (filtrarCliente)
+            {
+                cmd.Parameters.AddWithValue("@dni", dniCliente);
+            }
+            if (filtrarFechas)
+            {
+                // Ajustamos las fechas para cubrir el rango completo del dia
+                cmd.Parameters.AddWithValue("@desde", desde.Date);
+                cmd.Parameters.AddWithValue("@hasta", hasta.Date.AddDays(1).AddSeconds(-1));
+            }
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar ventas: " + ex.Message, "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Vistas
+namespace Vistas
 {
     partial class Principal
     {
@@ -40,6 +40,7 @@
             this.btnUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
@@ -147,7 +148,8 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.regVentasToolStripMenuItem});
+            this.regVentasToolStripMenuItem,
+            this.listadoDeVentasToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(71, 27);
             this.ventasToolStripMenuItem.Text = "Ventas";
@@ -158,6 +160,13 @@
             this.regVentasToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.regVentasToolStripMenuItem.Text = "Reg. Ventas";
             this.regVentasToolStripMenuItem.Click += new System.EventHandler(this.regVentasToolStripMenuItem_Click);
+            // 
+            // listadoDeVentasToolStripMenuItem
+            // 
+            this.listadoDeVentasToolStripMenuItem.Name = "listadoDeVentasToolStripMenuItem";
+            this.listadoDeVentasToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.listadoDeVentasToolStripMenuItem.Text = "Listado de Ventas";
+            this.listadoDeVentasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeVentasToolStripMenuItem_Click);
             // 
             // mnuSalir
             // 
@@ -258,6 +267,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnUsuarios;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnGestionClientes;
     }
 }
