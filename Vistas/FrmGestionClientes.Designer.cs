@@ -49,7 +49,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.opticaDataSet = new Vistas.opticaDataSet();
+            this.opticaDataSet = new ClasesBase.opticaDataSet();
             this.opticaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.cliDNIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,15 +59,15 @@
             this.oSCUITDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliNroCarnetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.opticaDataSet2 = new Vistas.opticaDataSet2();
-            this.clienteTableAdapter = new Vistas.opticaDataSet2TableAdapters.ClienteTableAdapter();
+            this.opticaDataSet = new ClasesBase.opticaDataSet();
+            this.clienteTableAdapter = new ClasesBase.opticaDataSetTableAdapters.ClienteTableAdapter();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet2)).BeginInit();
+            
             this.SuspendLayout();
             // 
             // btnModificar
@@ -309,12 +309,12 @@
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.opticaDataSet2;
+            this.clienteBindingSource.DataSource = this.opticaDataSet;
             // 
             // opticaDataSet2
             // 
-            this.opticaDataSet2.DataSetName = "opticaDataSet2";
-            this.opticaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.opticaDataSet.DataSetName = "opticaDataSet2";
+            this.opticaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clienteTableAdapter
             // 
@@ -375,7 +375,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,11 +404,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.BindingSource opticaDataSetBindingSource;
-        private opticaDataSet opticaDataSet;
+        private ClasesBase.opticaDataSet opticaDataSet;
         private System.Windows.Forms.DataGridView dgvClientes;
-        private opticaDataSet2 opticaDataSet2;
         private System.Windows.Forms.BindingSource clienteBindingSource;
-        private opticaDataSet2TableAdapters.ClienteTableAdapter clienteTableAdapter;
+        private ClasesBase.opticaDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliDNIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliApellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliNombreDataGridViewTextBoxColumn;

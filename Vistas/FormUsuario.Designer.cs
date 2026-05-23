@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dgtUsuarios = new System.Windows.Forms.DataGridView();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.opticaDataSet1 = new Vistas.opticaDataSet1();
-            this.usuarioTableAdapter = new Vistas.opticaDataSet1TableAdapters.UsuarioTableAdapter();
+            this.opticaDataSet = new ClasesBase.opticaDataSet();
+            this.usuarioTableAdapter = new ClasesBase.opticaDataSetTableAdapters.UsuarioTableAdapter();
             this.textPattern = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -40,7 +40,8 @@
             this.comboRoles = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rolesTableAdapter = new Vistas.opticaDataSet1TableAdapters.RolesTableAdapter();
+            this.rolesTableAdapter = new ClasesBase.opticaDataSetTableAdapters.RolesTableAdapter();
+            //this.rolesTableAdapter = new ClasesBase.opticaDataSet.RolesTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textNombAp = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgtUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -69,12 +70,12 @@
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.opticaDataSet1;
+            this.usuarioBindingSource.DataSource = this.opticaDataSet;
             // 
             // opticaDataSet1
             // 
-            this.opticaDataSet1.DataSetName = "opticaDataSet1";
-            this.opticaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.opticaDataSet.DataSetName = "opticaDataSet1";
+            this.opticaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuarioTableAdapter
             // 
@@ -146,7 +147,7 @@
             // rolesBindingSource
             // 
             this.rolesBindingSource.DataMember = "Roles";
-            this.rolesBindingSource.DataSource = this.opticaDataSet1;
+            this.rolesBindingSource.DataSource = this.opticaDataSet;
             // 
             // rolesTableAdapter
             // 
@@ -235,7 +236,7 @@
             this.Load += new System.EventHandler(this.FormUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgtUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
@@ -247,15 +248,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgtUsuarios;
-        private opticaDataSet1 opticaDataSet1;
+        private ClasesBase.opticaDataSet opticaDataSet;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private opticaDataSet1TableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private ClasesBase.opticaDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private System.Windows.Forms.TextBox textPattern;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource rolesBindingSource;
-        private opticaDataSet1TableAdapters.RolesTableAdapter rolesTableAdapter;
+        private ClasesBase.opticaDataSetTableAdapters.RolesTableAdapter rolesTableAdapter;
         private System.Windows.Forms.ComboBox comboRoles;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textPass;

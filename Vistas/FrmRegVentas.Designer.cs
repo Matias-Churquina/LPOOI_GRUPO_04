@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.opticaDataSet = new Vistas.opticaDataSet();
+            this.opticaDataSet = new ClasesBase.opticaDataSet();
             this.opticaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.opticaDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -239,7 +239,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-        private opticaDataSet opticaDataSet;
+        private ClasesBase.opticaDataSet opticaDataSet;
         private System.Windows.Forms.BindingSource opticaDataSetBindingSource;
         private System.Windows.Forms.BindingSource opticaDataSetBindingSource1;
         private System.Windows.Forms.GroupBox groupBox1;

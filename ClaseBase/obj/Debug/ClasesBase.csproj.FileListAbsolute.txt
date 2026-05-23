@@ -53,3 +53,11 @@ C:\Users\admin\Documents\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.pdb
 C:\Users\admin\Documents\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
 C:\Users\admin\Documents\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\bin\Debug\optica.mdf
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\bin\Debug\optica_log.LDF
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll.config
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.dll
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\bin\Debug\ClaseBase.pdb
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.dll
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\ClaseBase\obj\Debug\ClaseBase.pdb
