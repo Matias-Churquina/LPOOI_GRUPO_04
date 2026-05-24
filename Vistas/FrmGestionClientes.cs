@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +25,8 @@ namespace Vistas
 
         private void CargarGrilla()
         {
+            dgvClientes.Columns.Clear();
+            dgvClientes.AutoGenerateColumns = true;
             dgvClientes.DataSource = ClienteService.ObtenerClientes();
         }
 

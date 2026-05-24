@@ -37,6 +37,7 @@ namespace Vistas
             btnUsuarios.Enabled = true;
             ventasToolStripMenuItem.Enabled = true;
             regVentasToolStripMenuItem.Enabled = true;
+            listadoDeVentasToolStripMenuItem.Enabled = true;
 
             switch (RolService.getDescripcion(usuarioLogueado.Usu_Rol))
             {
@@ -48,6 +49,7 @@ namespace Vistas
                     btnAltaObrasSociales.Enabled = false;
                     ventasToolStripMenuItem.Enabled = false;
                     regVentasToolStripMenuItem.Enabled = false;
+                    listadoDeVentasToolStripMenuItem.Enabled = false;
                     break;
 
                 case "Operador":
@@ -125,6 +127,15 @@ namespace Vistas
         {
             FrmGestionClientes frm = new FrmGestionClientes();
 
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void listadoDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListadoVentas frm = new ListadoVentas();
+            
             this.Hide();
             frm.ShowDialog();
             this.Show();
