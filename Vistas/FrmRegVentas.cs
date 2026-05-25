@@ -19,46 +19,46 @@ namespace Vistas
 
         private void ActualizarPrecioYTotal()
         {
-            if (comboBox2.SelectedValue != null && comboBox2.DataSource != null)
+            if (cmbProducto.SelectedIndex != -1 && cmbProducto.SelectedItem != null)
             {
-                DataRowView rowSelected = (DataRowView)comboBox2.SelectedItem;
+                DataRowView rowSelected = (DataRowView)cmbProducto.SelectedItem;
                 if (rowSelected != null)
                 {
                     decimal precio = Convert.ToDecimal(rowSelected["Precio"]);
-                    textBox1.Text = precio.ToString("0.00");
+                    txtPrecio.Text = precio.ToString("0.00");
 
-                    decimal cantidad = numericUpDown1.Value;
+                    decimal cantidad = nupCantidad.Value;
                     decimal total = precio * cantidad;
-                    textBox2.Text = total.ToString("0.00");
+                    txtTotal.Text = total.ToString("0.00");
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedValue == null)
+            if (cmbCliente.SelectedValue == null)
             {
                 MessageBox.Show("Por favor, seleccione un cliente.", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (comboBox2.SelectedValue == null)
+            if (cmbProducto.SelectedValue == null)
             {
                 MessageBox.Show("Por favor, seleccione un producto.", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string dniCliente = comboBox1.SelectedValue.ToString();
+            string dniCliente = cmbCliente.SelectedValue.ToString();
             DateTime fecha = dateTimePicker1.Value;
-            string codigoProducto = comboBox2.SelectedValue.ToString();
-            decimal precio = Convert.ToDecimal(textBox1.Text);
-            decimal cantidad = numericUpDown1.Value;
-            decimal total = Convert.ToDecimal(textBox2.Text);
+            string codigoProducto = cmbProducto.SelectedValue.ToString();
+            decimal precio = Convert.ToDecimal(txtPrecio.Text);
+            decimal cantidad = nupCantidad.Value;
+            decimal total = Convert.ToDecimal(txtTotal.Text);
 
             DialogResult confirm = MessageBox.Show(
-                "Esta seguro que desea confirmar y registrar esta venta?", 
-                "Confirmacion de Compra", 
-                MessageBoxButtons.YesNo, 
+                "Esta seguro que desea confirmar y registrar esta venta?",
+                "Confirmacion de Compra",
+                MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
             );
 
@@ -88,29 +88,33 @@ namespace Vistas
         {
         }
 
-        private void FrmRegVentas_Load_1(object sender, EventArgs e)
+        private void FrmRegVentas_Load(object sender, EventArgs e)
         {
+            nupCantidad.Minimum = 1;
+            nupCantidad.Maximum = 1000;
+            nupCantidad.Value = 1;
+
             DataTable dtClientes = ClienteService.ObtenerClientes();
             if (dtClientes != null && dtClientes.Rows.Count > 0)
             {
-                comboBox1.DataSource = dtClientes;
-                comboBox1.ValueMember = "DNI";
-                comboBox1.DisplayMember = "Apellido";
+                cmbCliente.DataSource = dtClientes;
+                cmbCliente.ValueMember = "DNI"; 
+                cmbCliente.DisplayMember = "Apellido";
             }
 
             DataTable dtProductos = ProductoService.ObtenerProductosBD();
             if (dtProductos != null && dtProductos.Rows.Count > 0)
             {
-                comboBox2.DataSource = dtProductos;
-                comboBox2.ValueMember = "Codigo";
-                comboBox2.DisplayMember = "Descripcion";
+                cmbProducto.DataSource = dtProductos;
+                cmbProducto.ValueMember = "Codigo";   
+                cmbProducto.DisplayMember = "Descripcion";
             }
 
-            numericUpDown1.Minimum = 1;
-            numericUpDown1.Maximum = 1000;
-            numericUpDown1.Value = 1;
+            cmbCliente.SelectedIndex = -1;
+            cmbProducto.SelectedIndex = -1;
 
-            ActualizarPrecioYTotal();
+            txtPrecio.Text = "";
+            txtTotal.Text = "";
         }
     }
 }

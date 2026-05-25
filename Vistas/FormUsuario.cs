@@ -50,7 +50,6 @@ namespace Vistas
             {
                 MessageBox.Show("Debe seleccionar un rol");
             }
-            UsuarioService.insert_usuario(user);
             load_usuarios();
         }
 
@@ -68,17 +67,6 @@ namespace Vistas
             else
             {
                 load_usuarios();
-            }
-        }
-
-        private void dgtUsuarios_CurrentCellChanged(object sender, EventArgs e)
-        {
-            if (dgtUsuarios.CurrentRow != null)
-            {
-                //comboRoles.SelectedValue = dgtUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
-                textNombreUsu.Text = dgtUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
-                textPass.Text = dgtUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
-                textNombAp.Text = dgtUsuarios.CurrentRow.Cells["Apellido y Nombre"].Value.ToString();
             }
         }
 
@@ -115,6 +103,17 @@ namespace Vistas
 
                     dgtUsuarios.DataSource = UsuarioService.list_usuarios();
                 }
+            }
+        }
+
+        private void dgtUsuarios_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgtUsuarios.CurrentRow != null)
+            {
+                //comboRoles.SelectedValue = dgtUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
+                textNombreUsu.Text = dgtUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
+                textPass.Text = dgtUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
+                textNombAp.Text = dgtUsuarios.CurrentRow.Cells["Apellido y Nombre"].Value.ToString();
             }
         }
 

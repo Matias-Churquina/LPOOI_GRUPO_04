@@ -36,20 +36,19 @@
             this.textPattern = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnSaveUser = new System.Windows.Forms.Button();
+            this.textPass = new System.Windows.Forms.TextBox();
+            this.textNombreUsu = new System.Windows.Forms.TextBox();
+            this.textNombAp = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboRoles = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolesTableAdapter = new ClasesBase.opticaDataSetTableAdapters.RolesTableAdapter();
-            //this.rolesTableAdapter = new ClasesBase.opticaDataSet.RolesTableAdapter();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textNombAp = new System.Windows.Forms.TextBox();
-            this.textNombreUsu = new System.Windows.Forms.TextBox();
-            this.textPass = new System.Windows.Forms.TextBox();
-            this.btnSaveUser = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgtUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
@@ -65,14 +64,14 @@
             this.dgtUsuarios.RowTemplate.Height = 24;
             this.dgtUsuarios.Size = new System.Drawing.Size(740, 370);
             this.dgtUsuarios.TabIndex = 0;
-            this.dgtUsuarios.CurrentCellChanged += new System.EventHandler(this.dgtUsuarios_CurrentCellChanged);
+            this.dgtUsuarios.SelectionChanged += new System.EventHandler(this.dgtUsuarios_SelectionChanged);
             // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
             this.usuarioBindingSource.DataSource = this.opticaDataSet;
             // 
-            // opticaDataSet1
+            // opticaDataSet
             // 
             this.opticaDataSet.DataSetName = "opticaDataSet1";
             this.opticaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
@@ -118,6 +117,75 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Usuarios";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(51, 276);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(138, 35);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(51, 215);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(138, 35);
+            this.btnModificar.TabIndex = 9;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnSaveUser
+            // 
+            this.btnSaveUser.Location = new System.Drawing.Point(235, 215);
+            this.btnSaveUser.Name = "btnSaveUser";
+            this.btnSaveUser.Size = new System.Drawing.Size(138, 35);
+            this.btnSaveUser.TabIndex = 8;
+            this.btnSaveUser.Text = "Guardar";
+            this.btnSaveUser.UseVisualStyleBackColor = true;
+            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
+            // 
+            // textPass
+            // 
+            this.textPass.Location = new System.Drawing.Point(152, 164);
+            this.textPass.Name = "textPass";
+            this.textPass.Size = new System.Drawing.Size(243, 22);
+            this.textPass.TabIndex = 7;
+            // 
+            // textNombreUsu
+            // 
+            this.textNombreUsu.Location = new System.Drawing.Point(152, 123);
+            this.textNombreUsu.Name = "textNombreUsu";
+            this.textNombreUsu.Size = new System.Drawing.Size(243, 22);
+            this.textNombreUsu.TabIndex = 6;
+            // 
+            // textNombAp
+            // 
+            this.textNombAp.Location = new System.Drawing.Point(152, 81);
+            this.textNombAp.Name = "textNombAp";
+            this.textNombAp.Size = new System.Drawing.Size(243, 22);
+            this.textNombAp.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Nombre de Usuario:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Contraseña:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -152,75 +220,6 @@
             // rolesTableAdapter
             // 
             this.rolesTableAdapter.ClearBeforeFill = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Contraseña:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nombre de Usuario:";
-            // 
-            // textNombAp
-            // 
-            this.textNombAp.Location = new System.Drawing.Point(152, 81);
-            this.textNombAp.Name = "textNombAp";
-            this.textNombAp.Size = new System.Drawing.Size(243, 22);
-            this.textNombAp.TabIndex = 5;
-            // 
-            // textNombreUsu
-            // 
-            this.textNombreUsu.Location = new System.Drawing.Point(152, 123);
-            this.textNombreUsu.Name = "textNombreUsu";
-            this.textNombreUsu.Size = new System.Drawing.Size(243, 22);
-            this.textNombreUsu.TabIndex = 6;
-            // 
-            // textPass
-            // 
-            this.textPass.Location = new System.Drawing.Point(152, 164);
-            this.textPass.Name = "textPass";
-            this.textPass.Size = new System.Drawing.Size(243, 22);
-            this.textPass.TabIndex = 7;
-            // 
-            // btnSaveUser
-            // 
-            this.btnSaveUser.Location = new System.Drawing.Point(235, 215);
-            this.btnSaveUser.Name = "btnSaveUser";
-            this.btnSaveUser.Size = new System.Drawing.Size(138, 35);
-            this.btnSaveUser.TabIndex = 8;
-            this.btnSaveUser.Text = "Guardar";
-            this.btnSaveUser.UseVisualStyleBackColor = true;
-            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(51, 215);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(138, 35);
-            this.btnModificar.TabIndex = 9;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(51, 276);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(138, 35);
-            this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // FormUsuario
             // 

@@ -11,109 +11,118 @@ namespace ClasesBase.Service
 {
     public static class ClienteService
     {
-        private static List<Cliente> clientes = new List<Cliente>();
-
-        static ClienteService()
-        {
-    
-        }
 
         public static void AgregarCliente(Cliente cliente)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
-            string query = "INSERT INTO Cliente(Cli_DNI, Cli_Apellido, Cli_Nombre, Cli_Direccion, OS_CUIT, Cli_NroCarnet) " +
-                           "VALUES (@dni, @apellido, @nombre, @direccion, @cuit, @carnet)";
+            
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "INSERT INTO Cliente ";
+            cmd.CommandText += " (Cli_DNI, Cli_Apellido, Cli_Nombre, Cli_Direccion, OS_CUIT, Cli_NroCarnet) ";
+            cmd.CommandText += " VALUES ( ";
+            cmd.CommandText += " '" + cliente.Cli_DNI + "', ";
+            cmd.CommandText += " '" + cliente.Cli_Apellido + "', ";
+            cmd.CommandText += " '" + cliente.Cli_Nombre + "', ";
+            cmd.CommandText += " '" + cliente.Cli_Direccion + "', ";
+            cmd.CommandText += " '" + cliente.OS_CUIT + "', ";
+            cmd.CommandText += " '" + cliente.Cli_NroCarnet + "' ";
+            cmd.CommandText += " ) ";
 
-            SqlCommand cmd = new SqlCommand(query, cnn);
-            cmd.Parameters.AddWithValue("@dni", cliente.Cli_DNI);
-            cmd.Parameters.AddWithValue("@apellido", cliente.Cli_Apellido);
-            cmd.Parameters.AddWithValue("@nombre", cliente.Cli_Nombre);
-            cmd.Parameters.AddWithValue("@direccion", cliente.Cli_Direccion);
-            cmd.Parameters.AddWithValue("@cuit", cliente.OS_CUIT);
-            cmd.Parameters.AddWithValue("@carnet", cliente.Cli_NroCarnet);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
 
             try
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente registrado con éxito.", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Error al guardar el cliente en la base de datos: " + ex.Message);
             }
             finally
             {
-                cnn.Close();
+                if (cnn.State == ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
             }
         }
 
-       
         public static void UpdateCliente(Cliente cliente)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
-            string query = "UPDATE Cliente SET " +
-                           "Cli_Apellido = @apellido, " +
-                           "Cli_Nombre = @nombre, " +
-                           "Cli_Direccion = @direccion, " +
-                           "OS_CUIT = @cuit, " +
-                           "Cli_NroCarnet = @carnet " +
-                           "WHERE Cli_DNI = @dni";
+            
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Cliente SET ";
+            cmd.CommandText += " Cli_Apellido = '" + cliente.Cli_Apellido + "', ";
+            cmd.CommandText += " Cli_Nombre = '" + cliente.Cli_Nombre + "', ";
+            cmd.CommandText += " Cli_Direccion = '" + cliente.Cli_Direccion + "', ";
+            cmd.CommandText += " OS_CUIT = '" + cliente.OS_CUIT + "', ";
+            cmd.CommandText += " Cli_NroCarnet = '" + cliente.Cli_NroCarnet + "' ";
+            cmd.CommandText += " WHERE Cli_DNI = '" + cliente.Cli_DNI + "' ";
 
-            SqlCommand cmd = new SqlCommand(query, cnn);
-            cmd.Parameters.AddWithValue("@dni", cliente.Cli_DNI);
-            cmd.Parameters.AddWithValue("@apellido", cliente.Cli_Apellido);
-            cmd.Parameters.AddWithValue("@nombre", cliente.Cli_Nombre);
-            cmd.Parameters.AddWithValue("@direccion", cliente.Cli_Direccion);
-            cmd.Parameters.AddWithValue("@cuit", cliente.OS_CUIT);
-            cmd.Parameters.AddWithValue("@carnet", cliente.Cli_NroCarnet);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
 
             try
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Datos del cliente actualizados correctamente.", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al actualizar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Error al actualizar el cliente en la base de datos: " + ex.Message);
             }
             finally
             {
-                cnn.Close();
+                if (cnn.State == ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
             }
         }
 
-       
         public static void DeleteCliente(string dni)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
-            string query = "DELETE FROM Cliente WHERE Cli_DNI = @dni";
+            
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "DELETE FROM Cliente ";
+            cmd.CommandText += " WHERE Cli_DNI = '" + dni + "' ";
 
-            SqlCommand cmd = new SqlCommand(query, cnn);
-            cmd.Parameters.AddWithValue("@dni", dni);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
 
             try
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente eliminado correctamente.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar el cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Error al eliminar el cliente de la base de datos: " + ex.Message);
             }
             finally
             {
-                cnn.Close();
+                if (cnn.State == ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
             }
         }
 
-        
         public static DataTable ObtenerClientes()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
-            SqlCommand cmd = new SqlCommand("SELECT Cli_DNI as 'DNI', Cli_Apellido as 'Apellido', Cli_Nombre as 'Nombre', Cli_Direccion as 'Dirección', OS_CUIT as 'CUIT OS', Cli_NroCarnet as 'Nro Carnet' FROM Cliente", cnn);
+            
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI as 'DNI', Cli_Apellido as 'Apellido', Cli_Nombre as 'Nombre', ";
+            cmd.CommandText += " Cli_Direccion as 'Dirección', OS_CUIT as 'CUIT OS', Cli_NroCarnet as 'Nro Carnet' ";
+            cmd.CommandText += " FROM Cliente";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -123,7 +132,7 @@ namespace ClasesBase.Service
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al listar clientes: " + ex.Message);
+                MessageBox.Show("Error al listar clientes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return dt;
         }
@@ -131,20 +140,15 @@ namespace ClasesBase.Service
         public static DataTable SearchClientesCombinado(string sPatternApellido, string sPatternDNI)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
-            SqlCommand cmd = new SqlCommand();
-
             
-            cmd.CommandText = "SELECT Cli_DNI as 'DNI', Cli_Apellido as 'Apellido', Cli_Nombre as 'Nombre', " +
-                              "Cli_Direccion as 'Dirección', OS_CUIT as 'CUIT OS', Cli_NroCarnet as 'Nro Carnet' " +
-                              "FROM Cliente " +
-                              "WHERE Cli_Apellido LIKE @patternApellido AND Cli_DNI LIKE @patternDNI";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI as 'DNI', Cli_Apellido as 'Apellido', Cli_Nombre as 'Nombre', ";
+            cmd.CommandText += " Cli_Direccion as 'Dirección', OS_CUIT as 'CUIT OS', Cli_NroCarnet as 'Nro Carnet' ";
+            cmd.CommandText += " FROM Cliente ";
+            cmd.CommandText += " WHERE Cli_Apellido LIKE '%" + sPatternApellido + "%' AND Cli_DNI LIKE '%" + sPatternDNI + "%' ";
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
-
-            
-            cmd.Parameters.AddWithValue("@patternApellido", "%" + sPatternApellido + "%");
-            cmd.Parameters.AddWithValue("@patternDNI", "%" + sPatternDNI + "%");
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

@@ -67,7 +67,6 @@ namespace Vistas
         private void btnAltaCliente_Click(object sender, EventArgs e)
         {
             AltaCliente frm = new AltaCliente();
-
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -76,23 +75,14 @@ namespace Vistas
         private void btnAltaProductos_Click(object sender, EventArgs e)
         {
             AltaProducto frm = new AltaProducto();
-            
             this.Hide();
             frm.ShowDialog();
             this.Show();
         }
 
-
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void btnAltaObrasSociales_Click(object sender, EventArgs e)
         {
             AltaObraSocial frm = new AltaObraSocial();
-
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -109,24 +99,23 @@ namespace Vistas
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             FormUsuario frm = new FormUsuario();
+            this.Hide();
             frm.ShowDialog();
+            this.Show();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void regVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRegVentas frm = new FrmRegVentas();
+            this.Hide();
             frm.ShowDialog();
+            this.Show();
         }
 
         private void btnGestionClientes_Click(object sender, EventArgs e)
         {
             FrmGestionClientes frm = new FrmGestionClientes();
-
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -134,8 +123,7 @@ namespace Vistas
 
         private void listadoDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListadoVentas frm = new ListadoVentas();
-            
+            ListadoVentas frm = new ListadoVentas(); 
             this.Hide();
             frm.ShowDialog();
             this.Show();
