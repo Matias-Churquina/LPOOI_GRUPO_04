@@ -81,6 +81,7 @@
     <Compile Include="Service\VentaService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Service\app.config" />
     <None Include="ClassDiagram.cd" />
     <None Include="opticaDataSet.xsc">

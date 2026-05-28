@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -100,6 +100,12 @@
     <Compile Include="ListadoVentas.Designer.cs">
       <DependentUpon>ListadoVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoProductosVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoProductosVendidos.Designer.cs">
+      <DependentUpon>ListadoProductosVendidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AltaCliente.resx">
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegVentas.resx">
       <DependentUpon>FrmRegVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoProductosVendidos.resx">
+      <DependentUpon>ListadoProductosVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoVentas.resx">
       <DependentUpon>ListadoVentas.cs</DependentUpon>

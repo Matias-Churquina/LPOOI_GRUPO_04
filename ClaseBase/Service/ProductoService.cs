@@ -71,7 +71,29 @@ namespace ClasesBase.Service
 
             return dt;
         }
+
+        // Listar 
+        public static DataTable ListarProductosVendidosPorCliente(string dni)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "listarProductosVendidosPorCliente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
     }
+
 }
 
 /*using System;

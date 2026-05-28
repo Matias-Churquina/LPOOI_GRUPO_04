@@ -171,3 +171,4 @@ C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csproj.Gen
 C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmGestionClientes.resources
 C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoVentas.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoVentas.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoProductosVendidos.resources

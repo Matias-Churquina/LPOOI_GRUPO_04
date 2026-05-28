@@ -129,5 +129,13 @@ namespace Vistas
             this.Show();
         }
 
+        private void btnProductosVendidos_Click(object sender, EventArgs e)
+        {
+            ListadoProductosVendidos frm = new ListadoProductosVendidos();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
     }
 }
