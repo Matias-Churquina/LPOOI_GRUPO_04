@@ -70,6 +70,12 @@
     <Compile Include="FormUsuario.Designer.cs">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaProductos.Designer.cs">
+      <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,11 @@
     </Compile>
     <Compile Include="FrmRegVentas.Designer.cs">
       <DependentUpon>FrmRegVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="opticaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>opticaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -120,6 +131,9 @@
     <EmbeddedResource Include="FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaProductos.resx">
+      <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionClientes.resx">
       <DependentUpon>FrmGestionClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +163,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="opticaDataSet.xsc">
+      <DependentUpon>opticaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="opticaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>opticaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="opticaDataSet.xss">
+      <DependentUpon>opticaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

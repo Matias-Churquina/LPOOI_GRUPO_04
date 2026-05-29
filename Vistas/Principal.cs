@@ -137,5 +137,16 @@ namespace Vistas
             this.Show();
         }
 
+        
+
+        private void consultarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaProductos frm = new FrmConsultaProductos();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+       
     }
 }
