@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -178,6 +178,27 @@ namespace ClasesBase.Service
             DataTable dt = new DataTable();
             da.Fill(dt);
             
+            return dt;
+        }
+
+        public static DataTable ObtenerClientesOrdenadosPorApellido()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = new SqlCommand();
+            da.SelectCommand.Connection = cnn;
+            da.SelectCommand.CommandText = "listarClientesOrdenadosPorApellido";
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            DataTable dt = new DataTable();
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al listar clientes ordenados: " + ex.Message, "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return dt;
         }
 

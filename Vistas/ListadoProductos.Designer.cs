@@ -1,6 +1,6 @@
 namespace Vistas
 {
-    partial class ListadoVentas
+    partial class ListadoProductos
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -19,17 +19,15 @@ namespace Vistas
         {
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.grpFiltros = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.lblHasta = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.lblDesde = new System.Windows.Forms.Label();
             this.cmbClientes = new System.Windows.Forms.ComboBox();
-            this.lblTotalFacturado = new System.Windows.Forms.Label();
-            this.lblTotalValor = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.grpFiltros.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +47,7 @@ namespace Vistas
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(1140, 415);
+            this.dgvVentas.Size = new System.Drawing.Size(1140, 463);
             this.dgvVentas.TabIndex = 1;
             // 
             // grpFiltros
@@ -74,6 +72,50 @@ namespace Vistas
             this.grpFiltros.TabIndex = 0;
             this.grpFiltros.TabStop = false;
             this.grpFiltros.Text = " Filtros de Busqueda ";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(975, 105);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 46);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Limpiar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(30, 114);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(258, 29);
+            this.radioButton2.TabIndex = 10;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Filtrar por Rango de Fechas:";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(30, 47);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(176, 29);
+            this.radioButton1.TabIndex = 4;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Filtrar por Cliente:";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(975, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 46);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Filtrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtpHasta
             // 
@@ -128,97 +170,24 @@ namespace Vistas
             this.cmbClientes.Size = new System.Drawing.Size(523, 33);
             this.cmbClientes.TabIndex = 1;
             // 
-            // lblTotalFacturado
-            // 
-            this.lblTotalFacturado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalFacturado.AutoSize = true;
-            this.lblTotalFacturado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFacturado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTotalFacturado.Location = new System.Drawing.Point(810, 654);
-            this.lblTotalFacturado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalFacturado.Name = "lblTotalFacturado";
-            this.lblTotalFacturado.Size = new System.Drawing.Size(179, 30);
-            this.lblTotalFacturado.TabIndex = 2;
-            this.lblTotalFacturado.Text = "Total Facturado:";
-            // 
-            // lblTotalValor
-            // 
-            this.lblTotalValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalValor.AutoSize = true;
-            this.lblTotalValor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblTotalValor.Location = new System.Drawing.Point(1005, 654);
-            this.lblTotalValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalValor.Name = "lblTotalValor";
-            this.lblTotalValor.Size = new System.Drawing.Size(85, 32);
-            this.lblTotalValor.TabIndex = 3;
-            this.lblTotalValor.Text = "$ 0,00";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(975, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 46);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Filtrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(30, 47);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(176, 29);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Filtrar por Cliente:";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(30, 114);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(258, 29);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Filtrar por Rango de Fechas:";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(975, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 46);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // ListadoVentas
+            // ListadoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1176, 709);
-            this.Controls.Add(this.lblTotalValor);
-            this.Controls.Add(this.lblTotalFacturado);
             this.Controls.Add(this.grpFiltros);
             this.Controls.Add(this.dgvVentas);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1189, 739);
-            this.Name = "ListadoVentas";
+            this.Name = "ListadoProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado General y Filtro de Ventas";
-            this.Load += new System.EventHandler(this.ListadoVentas_Load);
+            this.Text = "Listado de Productos Vendidos";
+            this.Load += new System.EventHandler(this.ListadoProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.grpFiltros.ResumeLayout(false);
             this.grpFiltros.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -231,8 +200,6 @@ namespace Vistas
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label lblDesde;
-        private System.Windows.Forms.Label lblTotalFacturado;
-        private System.Windows.Forms.Label lblTotalValor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
