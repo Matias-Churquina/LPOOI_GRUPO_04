@@ -64,6 +64,12 @@
     <Compile Include="AltaProducto.Designer.cs">
       <DependentUpon>AltaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoProductos.Designer.cs">
+      <DependentUpon>ListadoProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="FrmConsultaProductos.Designer.cs">
       <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaClientes.Designer.cs">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGestionClientes.cs">
       <SubType>Form</SubType>
@@ -128,11 +140,17 @@
     <EmbeddedResource Include="AltaProducto.resx">
       <DependentUpon>AltaProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListadoProductos.resx">
+      <DependentUpon>ListadoProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaProductos.resx">
       <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaClientes.resx">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionClientes.resx">
       <DependentUpon>FrmGestionClientes.cs</DependentUpon>

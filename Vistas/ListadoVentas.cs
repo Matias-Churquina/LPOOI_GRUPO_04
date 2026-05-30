@@ -27,6 +27,7 @@ namespace Vistas
                 cmbClientes.DataSource = dtCombo;
                 cmbClientes.DisplayMember = "Apellido";
                 cmbClientes.ValueMember = "DNI";
+                cmbClientes.SelectedIndex = -1;
             }
         }
 
@@ -53,34 +54,65 @@ namespace Vistas
             lblTotalValor.Text = "$ " + totalAcumulado.ToString("N2");
         }
 
-        private void chkCliente_CheckedChanged(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            cmbClientes.Enabled = chkCliente.Checked;
+            // Habilita combobox de clientes y deshabilita fechas
+            cmbClientes.Enabled = radioButton1.Checked;
+            
+            if (radioButton1.Checked)
+            {
+                lblDesde.Enabled = false;
+                dtpDesde.Enabled = false;
+                lblHasta.Enabled = false;
+                dtpHasta.Enabled = false;
+            }
         }
 
-        private void chkFechas_CheckedChanged(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            lblDesde.Enabled = chkFechas.Checked;
-            dtpDesde.Enabled = chkFechas.Checked;
-            lblHasta.Enabled = chkFechas.Checked;
-            dtpHasta.Enabled = chkFechas.Checked;
+            // Habilita fechas y deshabilita combobox de clientes
+            lblDesde.Enabled = radioButton2.Checked;
+            dtpDesde.Enabled = radioButton2.Checked;
+            lblHasta.Enabled = radioButton2.Checked;
+            dtpHasta.Enabled = radioButton2.Checked;
+
+            if (radioButton2.Checked)
+            {
+                cmbClientes.Enabled = false;
+                cmbClientes.SelectedIndex = -1;
+            }
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            string dni = chkCliente.Checked && cmbClientes.SelectedValue != null ? cmbClientes.SelectedValue.ToString() : string.Empty;
-            DateTime desde = dtpDesde.Value;
-            DateTime hasta = dtpHasta.Value;
+            try
+            {
+                string dni = radioButton1.Checked && cmbClientes.SelectedValue != null ? cmbClientes.SelectedValue.ToString() : string.Empty;
+                DateTime desde = dtpDesde.Value;
+                DateTime hasta = dtpHasta.Value;
 
-            DataTable dt = VentaService.list_ventas_filtradas(dni, desde, hasta, chkCliente.Checked, chkFechas.Checked);
-            dgvVentas.DataSource = dt;
-            CalcularTotalAcumulado();
+                DataTable dt = VentaService.list_ventas_filtradas(dni, desde, hasta, radioButton1.Checked, radioButton2.Checked);
+                dgvVentas.DataSource = dt;
+                CalcularTotalAcumulado();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar las ventas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            chkCliente.Checked = false;
-            chkFechas.Checked = false;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            cmbClientes.Enabled = false;
+            cmbClientes.SelectedIndex = -1;
+            
+            lblDesde.Enabled = false;
+            dtpDesde.Enabled = false;
+            lblHasta.Enabled = false;
+            dtpHasta.Enabled = false;
+
             CargarVentasGeneral();
         }
     }

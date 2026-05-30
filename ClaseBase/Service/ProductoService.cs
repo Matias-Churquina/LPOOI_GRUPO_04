@@ -132,6 +132,26 @@ namespace ClasesBase.Service
             return dt;
         }
 
+        public static DataTable ListarProductosVendidosPorFechas(DateTime desde, DateTime hasta)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "listarProductosVendidosPorFecha";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@fechaDesde", desde);
+            cmd.Parameters.AddWithValue("@fechaHasta", hasta);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
     }
 
 }

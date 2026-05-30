@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema id="opticaDataSet" targetNamespace="http://tempuri.org/opticaDataSet.xsd" xmlns:mstns="http://tempuri.org/opticaDataSet.xsd" xmlns="http://tempuri.org/opticaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection ConnectionStringObject="Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\admin\Documents\aca\LPOOI_GRUPO_04\ClaseBase\optica.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="optica.mdf" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\optica.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="optica.mdf" ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductoTableAdapter" GeneratorDataComponentClassName="ProductoTableAdapter" Name="Producto" UserDataComponentName="ProductoTableAdapter">

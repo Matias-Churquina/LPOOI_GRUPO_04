@@ -1,4 +1,4 @@
-﻿namespace Vistas
+namespace Vistas
 {
     partial class FrmGestionClientes
     {
@@ -59,7 +59,6 @@
             this.oSCUITDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliNroCarnetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.opticaDataSet = new ClasesBase.opticaDataSet();
             this.clienteTableAdapter = new ClasesBase.opticaDataSetTableAdapters.ClienteTableAdapter();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -311,10 +310,7 @@
             this.clienteBindingSource.DataMember = "Cliente";
             this.clienteBindingSource.DataSource = this.opticaDataSet;
             // 
-            // opticaDataSet2
-            // 
-            this.opticaDataSet.DataSetName = "opticaDataSet2";
-            this.opticaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // clienteTableAdapter
             // 
@@ -375,7 +371,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
