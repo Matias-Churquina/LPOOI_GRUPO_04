@@ -11,6 +11,6 @@ namespace ClasesBase.Entity
         public string Prod_Categoria { get; set; }
         public string Prod_Descripcion { get; set; }
         public float Prod_Precio { get; set; }
-
+        public bool Prod_Activo { get; set; }
     }
 }

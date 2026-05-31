@@ -162,5 +162,13 @@ namespace Vistas
             frm.ShowDialog();
             this.Show();
         }
+
+        private void btnGestionDeProductos_Click(object sender, EventArgs e)
+        {
+            FrmGestionProductos frm = new FrmGestionProductos();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

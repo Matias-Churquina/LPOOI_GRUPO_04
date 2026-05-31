@@ -71,6 +71,57 @@ namespace ClasesBase.Service
 
             return dt;
         }
+        public static DataTable ObtenerProductosActivos() {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "listarProductosActivos";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public static void GuardarCambios(DataSet ds) {
+            if (ds.HasChanges()) {
+                SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = "eliminarProducto";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+                cmd.Parameters.Add("@Codigo", SqlDbType.VarChar, 50, "Codigo").SourceVersion = DataRowVersion.Original;
+
+                SqlCommand cmdSave = new SqlCommand();
+                cmdSave.CommandType = CommandType.StoredProcedure;
+                cmdSave.CommandText = "guardarProducto";
+                cmdSave.Connection = cnn;
+                cmdSave.Parameters.Add("@Codigo", SqlDbType.VarChar, 50, "Codigo");
+                cmdSave.Parameters.Add("@Categoria", SqlDbType.VarChar, 50, "Categoria");
+                cmdSave.Parameters.Add("@Descripcion", SqlDbType.VarChar, 50, "Descripcion");
+                cmdSave.Parameters.Add("@Precio", SqlDbType.Decimal, 0, "Precio");
+
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.InsertCommand = cmdSave;
+                da.UpdateCommand = cmdSave;
+                da.DeleteCommand = cmd;
+                try
+                {
+                    cnn.Open();
+                    da.Update(ds, "Producto");
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally {
+                    cnn.Close();
+                }
+                
+            }
+
+        }
 
         public static DataTable ObtenerProductosOrdenados(string criterioOrden)
         {

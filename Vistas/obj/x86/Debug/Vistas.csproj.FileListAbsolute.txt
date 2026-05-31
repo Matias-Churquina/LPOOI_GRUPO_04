@@ -200,3 +200,9 @@ C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsultaPr
 C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsultaClientes.resources
 C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoProductosVendidos.resources
 C:\Users\Maxy\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoProductos.resources
+C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoProductos.resources
+C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsultaProductos.resources
+C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsultaClientes.resources
+C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoProductosVendidos.resources
+C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoVentas.resources
+C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmGestionProductos.resources
