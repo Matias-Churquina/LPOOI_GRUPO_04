@@ -30,16 +30,18 @@ namespace Vistas
                     Cli_Apellido = txtClienteApellido.Text.Trim(),
                     Cli_Nombre = txtClienteNombre.Text.Trim(),
                     Cli_Direccion = txtClienteDireccion.Text.Trim(),
-                    OS_CUIT = txtClienteOS.Text,
+                    OS_CUIT = cmbObraSocial.SelectedValue != null ? cmbObraSocial.SelectedValue.ToString() : "",
                     Cli_NroCarnet = txtClienteNroCarnet.Text.Trim()
                 };
 
                 DialogResult respuesta = MessageBox.Show("¿Desea guardar el cliente?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (respuesta == DialogResult.Yes)
                 {
                     ClienteService.AgregarCliente(nuevo);
+
                     MessageBox.Show("Cliente registrado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarForm();   
+                    LimpiarForm();
                 }
             }
             catch (Exception ex)
@@ -56,19 +58,22 @@ namespace Vistas
             {
                 if (c is TextBox && string.IsNullOrWhiteSpace(c.Text))
                 {
-                    MessageBox.Show(
-                        "Complete todos los campos.",
-                        "Atención",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-
+                    MessageBox.Show("Complete todos los campos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     c.Focus();
                     return false;
                 }
             }
 
+            if (cmbObraSocial.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione una Obra Social para el cliente.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbObraSocial.Focus();
+                return false;
+            }
+
             return true;
         }
+
         private void LimpiarForm()
         {
             txtClienteDNI.Clear();
@@ -76,7 +81,7 @@ namespace Vistas
             txtClienteApellido.Clear();
             txtClienteNombre.Clear();
             txtClienteNroCarnet.Clear();
-            txtClienteOS.Clear();
+            cmbObraSocial.SelectedIndex = -1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -91,28 +96,18 @@ namespace Vistas
                 this.Close();
         }
 
-        private void Botones_MouseHover(object sender, EventArgs e)
+        private void AltaCliente_Load(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            btn.BackColor = Color.Black;
-            btn.ForeColor = Color.White;
+            load_combo_obrasSociales();
         }
 
-        private void Botones_MouseLeave(object sender, EventArgs e)
+        private void load_combo_obrasSociales()
         {
-            Button btn = (Button)sender;
-            btn.BackColor = SystemColors.Control;
-            btn.ForeColor = Color.Black;
+            cmbObraSocial.DisplayMember = "OS_RazonSocial";
+            cmbObraSocial.ValueMember = "OS_CUIT"; 
+            cmbObraSocial.DataSource = ObraSocialService.list_ObrasSociales();
+            cmbObraSocial.SelectedIndex = -1;    
         }
 
-        private void AltaCliente_Load(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

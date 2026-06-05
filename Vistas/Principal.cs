@@ -29,34 +29,48 @@ namespace Vistas
             mnuClientes.Enabled = true;
             btnAltaCliente.Enabled = true;
             btnGestionClientes.Enabled = true;
-            mnuProductos.Enabled = true;
+            btnConsularCliente.Enabled = true;
+
             btnAltaProductos.Enabled = true;
-            mnuObrasSociales.Enabled = true;
+            btnGestionDeProductos.Enabled = true;
+            btnListadoProductos.Enabled = true;
+            btnConsultarProductos.Enabled = true;
+
             btnAltaObrasSociales.Enabled = true;
-            usuariosToolStripMenuItem.Enabled = true;
-            btnUsuarios.Enabled = true;
-            ventasToolStripMenuItem.Enabled = true;
-            regVentasToolStripMenuItem.Enabled = true;
-            listadoDeVentasToolStripMenuItem.Enabled = true;
+            btnListadoObrasSociales.Enabled = true;
+
+            btnAltaUsuario.Enabled = true;
+            btnGestionUsuarios.Enabled = true;
+
+            btnRegistrarVentas.Enabled = true;
+            btnListadoVentas.Enabled = true;
+
 
             switch (RolService.getDescripcion(usuarioLogueado.Usu_Rol))
             {
                 case "Administrador":
-                    mnuClientes.Enabled = false;
                     btnAltaCliente.Enabled = false;
                     btnGestionClientes.Enabled = false;
-                    mnuObrasSociales.Enabled = false;
+                    btnConsularCliente.Enabled = false;
+
                     btnAltaObrasSociales.Enabled = false;
-                    ventasToolStripMenuItem.Enabled = false;
-                    regVentasToolStripMenuItem.Enabled = false;
-                    listadoDeVentasToolStripMenuItem.Enabled = false;
+                    btnListadoObrasSociales.Enabled = false;
+
+                    btnRegistrarVentas.Enabled = false;
+                    btnListadoVentas.Enabled = false;
                     break;
 
                 case "Operador":
-                    mnuProductos.Enabled = false;
                     btnAltaProductos.Enabled = false;
-                    usuariosToolStripMenuItem.Enabled = false;
-                    btnUsuarios.Enabled = false;
+                    btnGestionDeProductos.Enabled = false;
+                    btnListadoProductos.Enabled = false;
+                    btnConsultarProductos.Enabled = false;
+
+                    btnAltaObrasSociales.Enabled = false;
+                    btnListadoObrasSociales.Enabled = false;
+
+                    btnAltaUsuario.Enabled = false;
+                    btnGestionUsuarios.Enabled = false;
                     break;
 
                 case "Auditor":
@@ -98,7 +112,7 @@ namespace Vistas
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            FormUsuario frm = new FormUsuario();
+            FrmGestionUsuarios frm = new FrmGestionUsuarios();
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -166,6 +180,30 @@ namespace Vistas
         private void btnGestionDeProductos_Click(object sender, EventArgs e)
         {
             FrmGestionProductos frm = new FrmGestionProductos();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnAltaUsuario_Click(object sender, EventArgs e)
+        {
+            AltaUsuario frm = new AltaUsuario();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnGestionUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmGestionUsuarios frm = new FrmGestionUsuarios();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnListadoObrasSociales_Click(object sender, EventArgs e)
+        {
+            ListadoObrasSociales frm = new ListadoObrasSociales();
             this.Hide();
             frm.ShowDialog();
             this.Show();

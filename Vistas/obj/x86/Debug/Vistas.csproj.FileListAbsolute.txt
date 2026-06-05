@@ -161,7 +161,6 @@ C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.csprojReso
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
-C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FormUsuario.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmGestionClientes.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmRegVentas.resources
@@ -206,3 +205,10 @@ C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsultaC
 C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoProductosVendidos.resources
 C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoVentas.resources
 C:\Users\admin\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmGestionProductos.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmGestionProductos.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoProductos.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsultaProductos.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsultaClientes.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmGestionUsuarios.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaUsuario.resources
+C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoObrasSociales.resources

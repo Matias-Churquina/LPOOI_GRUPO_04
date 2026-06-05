@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class FormUsuario
+    partial class FrmGestionUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,42 +29,42 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgtUsuarios = new System.Windows.Forms.DataGridView();
+            this.dgwUsuarios = new System.Windows.Forms.DataGridView();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.opticaDataSet = new ClasesBase.opticaDataSet();
             this.usuarioTableAdapter = new ClasesBase.opticaDataSetTableAdapters.UsuarioTableAdapter();
-            this.textPattern = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnSaveUser = new System.Windows.Forms.Button();
-            this.textPass = new System.Windows.Forms.TextBox();
-            this.textNombreUsu = new System.Windows.Forms.TextBox();
-            this.textNombAp = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboRoles = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtContrasenia = new System.Windows.Forms.TextBox();
+            this.txtNomUsuario = new System.Windows.Forms.TextBox();
+            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
+            this.lblNomUsuario = new System.Windows.Forms.Label();
+            this.lblContrasenia = new System.Windows.Forms.Label();
+            this.lblNombreCompleto = new System.Windows.Forms.Label();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
+            this.lblRol = new System.Windows.Forms.Label();
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolesTableAdapter = new ClasesBase.opticaDataSetTableAdapters.RolesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dgtUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgtUsuarios
+            // dgwUsuarios
             // 
-            this.dgtUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtUsuarios.Location = new System.Drawing.Point(13, 116);
-            this.dgtUsuarios.Name = "dgtUsuarios";
-            this.dgtUsuarios.RowTemplate.Height = 24;
-            this.dgtUsuarios.Size = new System.Drawing.Size(740, 370);
-            this.dgtUsuarios.TabIndex = 0;
-            this.dgtUsuarios.SelectionChanged += new System.EventHandler(this.dgtUsuarios_SelectionChanged);
+            this.dgwUsuarios.AllowUserToAddRows = false;
+            this.dgwUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwUsuarios.Location = new System.Drawing.Point(13, 116);
+            this.dgwUsuarios.Name = "dgwUsuarios";
+            this.dgwUsuarios.RowTemplate.Height = 24;
+            this.dgwUsuarios.Size = new System.Drawing.Size(740, 370);
+            this.dgwUsuarios.TabIndex = 0;
+            this.dgwUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsuarios_CellClick);
             // 
             // usuarioBindingSource
             // 
@@ -80,12 +80,12 @@
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // textPattern
+            // txtBusqueda
             // 
-            this.textPattern.Location = new System.Drawing.Point(13, 71);
-            this.textPattern.Name = "textPattern";
-            this.textPattern.Size = new System.Drawing.Size(602, 22);
-            this.textPattern.TabIndex = 1;
+            this.txtBusqueda.Location = new System.Drawing.Point(13, 71);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(602, 22);
+            this.txtBusqueda.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -101,15 +101,14 @@
             // 
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
-            this.groupBox1.Controls.Add(this.btnSaveUser);
-            this.groupBox1.Controls.Add(this.textPass);
-            this.groupBox1.Controls.Add(this.textNombreUsu);
-            this.groupBox1.Controls.Add(this.textNombAp);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboRoles);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtContrasenia);
+            this.groupBox1.Controls.Add(this.txtNomUsuario);
+            this.groupBox1.Controls.Add(this.txtNombreCompleto);
+            this.groupBox1.Controls.Add(this.lblNomUsuario);
+            this.groupBox1.Controls.Add(this.lblContrasenia);
+            this.groupBox1.Controls.Add(this.lblNombreCompleto);
+            this.groupBox1.Controls.Add(this.cmbRoles);
+            this.groupBox1.Controls.Add(this.lblRol);
             this.groupBox1.Location = new System.Drawing.Point(769, 116);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(401, 369);
@@ -119,7 +118,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(51, 276);
+            this.btnEliminar.Location = new System.Drawing.Point(216, 248);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(138, 35);
             this.btnEliminar.TabIndex = 10;
@@ -129,7 +128,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(51, 215);
+            this.btnModificar.Location = new System.Drawing.Point(47, 248);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(138, 35);
             this.btnModificar.TabIndex = 9;
@@ -137,80 +136,70 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnSaveUser
+            // txtContrasenia
             // 
-            this.btnSaveUser.Location = new System.Drawing.Point(235, 215);
-            this.btnSaveUser.Name = "btnSaveUser";
-            this.btnSaveUser.Size = new System.Drawing.Size(138, 35);
-            this.btnSaveUser.TabIndex = 8;
-            this.btnSaveUser.Text = "Guardar";
-            this.btnSaveUser.UseVisualStyleBackColor = true;
-            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
+            this.txtContrasenia.Location = new System.Drawing.Point(152, 164);
+            this.txtContrasenia.Name = "txtContrasenia";
+            this.txtContrasenia.Size = new System.Drawing.Size(243, 22);
+            this.txtContrasenia.TabIndex = 7;
             // 
-            // textPass
+            // txtNomUsuario
             // 
-            this.textPass.Location = new System.Drawing.Point(152, 164);
-            this.textPass.Name = "textPass";
-            this.textPass.Size = new System.Drawing.Size(243, 22);
-            this.textPass.TabIndex = 7;
+            this.txtNomUsuario.Location = new System.Drawing.Point(152, 123);
+            this.txtNomUsuario.Name = "txtNomUsuario";
+            this.txtNomUsuario.Size = new System.Drawing.Size(243, 22);
+            this.txtNomUsuario.TabIndex = 6;
             // 
-            // textNombreUsu
+            // txtNombreCompleto
             // 
-            this.textNombreUsu.Location = new System.Drawing.Point(152, 123);
-            this.textNombreUsu.Name = "textNombreUsu";
-            this.textNombreUsu.Size = new System.Drawing.Size(243, 22);
-            this.textNombreUsu.TabIndex = 6;
+            this.txtNombreCompleto.Location = new System.Drawing.Point(152, 81);
+            this.txtNombreCompleto.Name = "txtNombreCompleto";
+            this.txtNombreCompleto.Size = new System.Drawing.Size(243, 22);
+            this.txtNombreCompleto.TabIndex = 5;
             // 
-            // textNombAp
+            // lblNomUsuario
             // 
-            this.textNombAp.Location = new System.Drawing.Point(152, 81);
-            this.textNombAp.Name = "textNombAp";
-            this.textNombAp.Size = new System.Drawing.Size(243, 22);
-            this.textNombAp.TabIndex = 5;
+            this.lblNomUsuario.AutoSize = true;
+            this.lblNomUsuario.Location = new System.Drawing.Point(6, 128);
+            this.lblNomUsuario.Name = "lblNomUsuario";
+            this.lblNomUsuario.Size = new System.Drawing.Size(135, 17);
+            this.lblNomUsuario.TabIndex = 4;
+            this.lblNomUsuario.Text = "Nombre de Usuario:";
             // 
-            // label4
+            // lblContrasenia
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nombre de Usuario:";
+            this.lblContrasenia.AutoSize = true;
+            this.lblContrasenia.Location = new System.Drawing.Point(6, 169);
+            this.lblContrasenia.Name = "lblContrasenia";
+            this.lblContrasenia.Size = new System.Drawing.Size(85, 17);
+            this.lblContrasenia.TabIndex = 3;
+            this.lblContrasenia.Text = "Contraseña:";
             // 
-            // label3
+            // lblNombreCompleto
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Contraseña:";
+            this.lblNombreCompleto.AutoSize = true;
+            this.lblNombreCompleto.Location = new System.Drawing.Point(6, 86);
+            this.lblNombreCompleto.Name = "lblNombreCompleto";
+            this.lblNombreCompleto.Size = new System.Drawing.Size(127, 17);
+            this.lblNombreCompleto.TabIndex = 2;
+            this.lblNombreCompleto.Text = "Nombre y Apellido:";
             // 
-            // label2
+            // cmbRoles
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre y Apellido:";
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Location = new System.Drawing.Point(152, 36);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(243, 24);
+            this.cmbRoles.TabIndex = 1;
             // 
-            // comboRoles
+            // lblRol
             // 
-            this.comboRoles.FormattingEnabled = true;
-            this.comboRoles.Location = new System.Drawing.Point(152, 36);
-            this.comboRoles.Name = "comboRoles";
-            this.comboRoles.Size = new System.Drawing.Size(243, 24);
-            this.comboRoles.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Rol:";
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(6, 39);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(33, 17);
+            this.lblRol.TabIndex = 0;
+            this.lblRol.Text = "Rol:";
             // 
             // rolesBindingSource
             // 
@@ -221,19 +210,19 @@
             // 
             this.rolesTableAdapter.ClearBeforeFill = true;
             // 
-            // FormUsuario
+            // FormGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 590);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.textPattern);
-            this.Controls.Add(this.dgtUsuarios);
-            this.Name = "FormUsuario";
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.dgwUsuarios);
+            this.Name = "FormGestionUsuarios";
             this.Text = "FormUsuario";
             this.Load += new System.EventHandler(this.FormUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgtUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -246,24 +235,23 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgtUsuarios;
+        private System.Windows.Forms.DataGridView dgwUsuarios;
         private ClasesBase.opticaDataSet opticaDataSet;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private ClasesBase.opticaDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
-        private System.Windows.Forms.TextBox textPattern;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.BindingSource rolesBindingSource;
         private ClasesBase.opticaDataSetTableAdapters.RolesTableAdapter rolesTableAdapter;
-        private System.Windows.Forms.ComboBox comboRoles;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textPass;
-        private System.Windows.Forms.TextBox textNombreUsu;
-        private System.Windows.Forms.TextBox textNombAp;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnSaveUser;
+        private System.Windows.Forms.ComboBox cmbRoles;
+        private System.Windows.Forms.Label lblNombreCompleto;
+        private System.Windows.Forms.TextBox txtContrasenia;
+        private System.Windows.Forms.TextBox txtNomUsuario;
+        private System.Windows.Forms.TextBox txtNombreCompleto;
+        private System.Windows.Forms.Label lblNomUsuario;
+        private System.Windows.Forms.Label lblContrasenia;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
     }

@@ -26,7 +26,7 @@ namespace Vistas
         {
             cmbCliente.DisplayMember = "Cli_Apellido";
             cmbCliente.ValueMember = "Cli_DNI";
-            cmbCliente.DataSource = ClienteService.list_usuarios();
+            cmbCliente.DataSource = ClienteService.list_clientes();
             cmbCliente.SelectedIndex = -1;
         }
 

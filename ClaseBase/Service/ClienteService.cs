@@ -12,6 +12,33 @@ namespace ClasesBase.Service
     public static class ClienteService
     {
 
+        // Listar clientes en DataGridView
+        public static DataTable list_clientes()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Cli_DNI as 'DNI', Cli_Apellido as 'Apellido', Cli_Nombre as 'Nombre', ";
+            cmd.CommandText += " Cli_Direccion as 'Dirección', OS_CUIT as 'CUIT OS', Cli_NroCarnet as 'Nro Carnet' ";
+            cmd.CommandText += " FROM Cliente";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            try
+            {
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al listar clientes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+
+
         public static void AgregarCliente(Cliente cliente)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
@@ -112,31 +139,6 @@ namespace ClasesBase.Service
             }
         }
 
-        public static DataTable ObtenerClientes()
-        {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
-            
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT Cli_DNI as 'DNI', Cli_Apellido as 'Apellido', Cli_Nombre as 'Nombre', ";
-            cmd.CommandText += " Cli_Direccion as 'Dirección', OS_CUIT as 'CUIT OS', Cli_NroCarnet as 'Nro Carnet' ";
-            cmd.CommandText += " FROM Cliente";
-
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            try
-            {
-                da.Fill(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al listar clientes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return dt;
-        }
-
         public static DataTable SearchClientesCombinado(string sPatternApellido, string sPatternDNI)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
@@ -165,21 +167,7 @@ namespace ClasesBase.Service
             return dt;
         }
 
-        public static DataTable list_usuarios(){
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString1);
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Cliente";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            
-            return dt;
-        }
 
         public static DataTable ObtenerClientesOrdenadosPorApellido()
         {

@@ -52,6 +52,11 @@ namespace Vistas
             dataGridView1.AutoGenerateColumns = true;
             bindingSource1.DataSource = ProductoService.ObtenerProductosActivos();
         }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
         
     }
 }

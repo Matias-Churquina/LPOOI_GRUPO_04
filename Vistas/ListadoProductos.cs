@@ -22,7 +22,7 @@ namespace Vistas
         {
             try
             {
-                DataTable dt = ClienteService.ObtenerClientes();
+                DataTable dt = ClienteService.list_clientes();
                 if (dt != null && dt.Rows.Count > 0)
                 {
                     DataTable dtCombo = dt.Copy();
@@ -116,6 +116,11 @@ namespace Vistas
             dtpHasta.Enabled = false;
 
             LimpiarGrilla();
+        }
+
+        private void grpFiltros_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

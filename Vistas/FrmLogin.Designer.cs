@@ -67,7 +67,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(103, 32);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
             // lblContrasenia
             // 

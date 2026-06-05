@@ -20,16 +20,15 @@ namespace Vistas
 
         private void FrmGestionClientes_Load(object sender, EventArgs e)
         {
-            CargarGrilla();
+            load_clientes();
         }
 
-        private void CargarGrilla()
+        private void load_clientes()
         {
             dgvClientes.Columns.Clear();
             dgvClientes.AutoGenerateColumns = true;
-            dgvClientes.DataSource = ClienteService.ObtenerClientes();
+            dgvClientes.DataSource = ClienteService.list_clientes();
         }
-
 
         private void LimpiarCajasEdicion()
         {
@@ -41,9 +40,9 @@ namespace Vistas
             txtNroCarnet.Clear();
         }
 
-        private void btnModificar_Click_1(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            
             if (string.IsNullOrWhiteSpace(txtDNI.Text))
             {
                 MessageBox.Show("Seleccione un cliente de la lista para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -54,6 +53,7 @@ namespace Vistas
 
             if (respuesta == DialogResult.Yes)
             {
+                if (!ValidarCampos()) return;
                 Cliente clienteModificado = new Cliente()
                 {
                     Cli_DNI = txtDNI.Text, 
@@ -65,12 +65,37 @@ namespace Vistas
                 };
 
                 ClienteService.UpdateCliente(clienteModificado);
-                CargarGrilla(); 
+                load_clientes();
                 LimpiarCajasEdicion();
             }
         }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)
+
+        private bool ValidarCampos()
+        {
+            List<TextBox> camposEdicion = new List<TextBox>() { 
+                txtDNI, txtApellido, txtNombre, txtDireccion, txtCuit, txtNroCarnet 
+            };
+
+            foreach (TextBox txt in camposEdicion)
+            {
+                if (string.IsNullOrWhiteSpace(txt.Text))
+                {
+                    MessageBox.Show(
+                        "Complete todos los campos del cliente para poder modificar.",
+                        "Atención",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    txt.Focus();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtDNI.Text))
             {
@@ -84,22 +109,12 @@ namespace Vistas
             {
                 string dniSeleccionado = txtDNI.Text;
                 ClienteService.DeleteCliente(dniSeleccionado);
-                CargarGrilla(); 
+                load_clientes(); 
                 LimpiarCajasEdicion();
             }
         }
 
-        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-        }
-
-        private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string filtroApellido = txtBuscarApellido.Text.Trim();
             string filtroDNI = txtBuscarDNI.Text.Trim();
@@ -112,7 +127,7 @@ namespace Vistas
         {
             txtBuscarApellido.Clear();
             txtBuscarDNI.Clear();
-            CargarGrilla(); 
+            load_clientes(); 
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -131,5 +146,6 @@ namespace Vistas
                 txtNroCarnet.Text = fila.Cells["Nro Carnet"].Value.ToString();
             }
         }
+
     }
 }

@@ -20,7 +20,7 @@ namespace Vistas
 
         private void CargarClientes()
         {
-            DataTable dt = ClienteService.ObtenerClientes();
+            DataTable dt = ClienteService.list_clientes();
             if (dt != null && dt.Rows.Count > 0)
             {
                 DataTable dtCombo = dt.Copy();

@@ -64,11 +64,23 @@
     <Compile Include="AltaProducto.Designer.cs">
       <DependentUpon>AltaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="AltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaUsuario.Designer.cs">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmGestionProductos.Designer.cs">
       <DependentUpon>FrmGestionProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoObrasSociales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoObrasSociales.Designer.cs">
+      <DependentUpon>ListadoObrasSociales.cs</DependentUpon>
     </Compile>
     <Compile Include="ListadoProductos.cs">
       <SubType>Form</SubType>
@@ -76,11 +88,11 @@
     <Compile Include="ListadoProductos.Designer.cs">
       <DependentUpon>ListadoProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUsuario.cs">
+    <Compile Include="FrmGestionUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsuario.Designer.cs">
-      <DependentUpon>FormUsuario.cs</DependentUpon>
+    <Compile Include="FrmGestionUsuarios.Designer.cs">
+      <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultaProductos.cs">
       <SubType>Form</SubType>
@@ -105,11 +117,6 @@
     </Compile>
     <Compile Include="FrmRegVentas.Designer.cs">
       <DependentUpon>FrmRegVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="opticaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>opticaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -146,14 +153,20 @@
     <EmbeddedResource Include="AltaProducto.resx">
       <DependentUpon>AltaProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltaUsuario.resx">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionProductos.resx">
       <DependentUpon>FrmGestionProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoObrasSociales.resx">
+      <DependentUpon>ListadoObrasSociales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoProductos.resx">
       <DependentUpon>ListadoProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUsuario.resx">
-      <DependentUpon>FormUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmGestionUsuarios.resx">
+      <DependentUpon>FrmGestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaProductos.resx">
       <DependentUpon>FrmConsultaProductos.cs</DependentUpon>
@@ -190,17 +203,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="opticaDataSet.xsc">
-      <DependentUpon>opticaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="opticaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>opticaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="opticaDataSet.xss">
-      <DependentUpon>opticaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

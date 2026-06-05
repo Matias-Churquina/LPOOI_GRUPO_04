@@ -45,11 +45,6 @@ namespace Vistas
 
                 this.Hide();
                 frmPrincipal.ShowDialog();
-                //this.Show();
-
-                txtUsuario.Clear();
-                txtContrasenia.Clear();
-                txtUsuario.Focus();
             }
             else
             {
@@ -100,9 +95,5 @@ namespace Vistas
                 picMostrarPassword.Image = Properties.Resources.ojo_cerrado;
         }
 
-        private void lblUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

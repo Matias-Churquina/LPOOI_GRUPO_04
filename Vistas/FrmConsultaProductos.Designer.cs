@@ -32,18 +32,18 @@
             this.btnPorDescripcion = new System.Windows.Forms.RadioButton();
             this.btnPorCategoria = new System.Windows.Forms.RadioButton();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.opticaDataSet = new Vistas.opticaDataSet();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTableAdapter = new Vistas.opticaDataSetTableAdapters.ProductoTableAdapter();
             this.prodCodigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodDescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodPrecioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.opticaDataSet = new ClasesBase.opticaDataSet();
+            this.productoTableAdapter = new ClasesBase.opticaDataSetTableAdapters.ProductoTableAdapter();
             this.Orden = new System.Windows.Forms.GroupBox();
             this.btnListarProductos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             this.Orden.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +51,10 @@
             // 
             this.btnPorDescripcion.AutoSize = true;
             this.btnPorDescripcion.Checked = true;
-            this.btnPorDescripcion.Location = new System.Drawing.Point(6, 19);
+            this.btnPorDescripcion.Location = new System.Drawing.Point(28, 33);
+            this.btnPorDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPorDescripcion.Name = "btnPorDescripcion";
-            this.btnPorDescripcion.Size = new System.Drawing.Size(103, 17);
+            this.btnPorDescripcion.Size = new System.Drawing.Size(133, 21);
             this.btnPorDescripcion.TabIndex = 0;
             this.btnPorDescripcion.TabStop = true;
             this.btnPorDescripcion.Text = "Por Descripcion:";
@@ -62,9 +63,10 @@
             // btnPorCategoria
             // 
             this.btnPorCategoria.AutoSize = true;
-            this.btnPorCategoria.Location = new System.Drawing.Point(6, 51);
+            this.btnPorCategoria.Location = new System.Drawing.Point(28, 73);
+            this.btnPorCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPorCategoria.Name = "btnPorCategoria";
-            this.btnPorCategoria.Size = new System.Drawing.Size(92, 17);
+            this.btnPorCategoria.Size = new System.Drawing.Size(120, 21);
             this.btnPorCategoria.TabIndex = 1;
             this.btnPorCategoria.TabStop = true;
             this.btnPorCategoria.Text = "Por Categorìa:";
@@ -80,24 +82,11 @@
             this.prodDescripcionDataGridViewTextBoxColumn,
             this.prodPrecioDataGridViewTextBoxColumn});
             this.dgvProductos.DataSource = this.productoBindingSource;
-            this.dgvProductos.Location = new System.Drawing.Point(12, 12);
+            this.dgvProductos.Location = new System.Drawing.Point(347, 60);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(443, 416);
+            this.dgvProductos.Size = new System.Drawing.Size(591, 294);
             this.dgvProductos.TabIndex = 2;
-            // 
-            // opticaDataSet
-            // 
-            this.opticaDataSet.DataSetName = "opticaDataSet";
-            this.opticaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.opticaDataSet;
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // prodCodigoDataGridViewTextBoxColumn
             // 
@@ -123,23 +112,40 @@
             this.prodPrecioDataGridViewTextBoxColumn.HeaderText = "Prod_Precio";
             this.prodPrecioDataGridViewTextBoxColumn.Name = "prodPrecioDataGridViewTextBoxColumn";
             // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.opticaDataSet;
+            // 
+            // opticaDataSet
+            // 
+            this.opticaDataSet.DataSetName = "opticaDataSet";
+            this.opticaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
             // Orden
             // 
             this.Orden.Controls.Add(this.btnListarProductos);
             this.Orden.Controls.Add(this.btnPorDescripcion);
             this.Orden.Controls.Add(this.btnPorCategoria);
-            this.Orden.Location = new System.Drawing.Point(12, 438);
+            this.Orden.Location = new System.Drawing.Point(36, 60);
+            this.Orden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Orden.Name = "Orden";
-            this.Orden.Size = new System.Drawing.Size(286, 81);
+            this.Orden.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Orden.Size = new System.Drawing.Size(220, 190);
             this.Orden.TabIndex = 3;
             this.Orden.TabStop = false;
             this.Orden.Text = "Orden:";
             // 
             // btnListarProductos
             // 
-            this.btnListarProductos.Location = new System.Drawing.Point(174, 45);
+            this.btnListarProductos.Location = new System.Drawing.Point(70, 117);
+            this.btnListarProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListarProductos.Name = "btnListarProductos";
-            this.btnListarProductos.Size = new System.Drawing.Size(94, 23);
+            this.btnListarProductos.Size = new System.Drawing.Size(125, 28);
             this.btnListarProductos.TabIndex = 2;
             this.btnListarProductos.Text = "Listar Productos";
             this.btnListarProductos.UseVisualStyleBackColor = true;
@@ -147,17 +153,18 @@
             // 
             // FrmConsultaProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 531);
+            this.ClientSize = new System.Drawing.Size(1049, 489);
             this.Controls.Add(this.Orden);
             this.Controls.Add(this.dgvProductos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmConsultaProductos";
             this.Text = "FrmConsultaProductos";
             this.Load += new System.EventHandler(this.FrmConsultaProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).EndInit();
             this.Orden.ResumeLayout(false);
             this.Orden.PerformLayout();
             this.ResumeLayout(false);
@@ -169,9 +176,9 @@
         private System.Windows.Forms.RadioButton btnPorDescripcion;
         private System.Windows.Forms.RadioButton btnPorCategoria;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private opticaDataSet opticaDataSet;
+        private ClasesBase.opticaDataSet opticaDataSet;
         private System.Windows.Forms.BindingSource productoBindingSource;
-        private opticaDataSetTableAdapters.ProductoTableAdapter productoTableAdapter;
+        private ClasesBase.opticaDataSetTableAdapters.ProductoTableAdapter productoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodCodigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodCategoriaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDescripcionDataGridViewTextBoxColumn;

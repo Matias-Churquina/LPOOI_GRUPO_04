@@ -69,6 +69,7 @@ namespace ClasesBase.Service
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT ";
+            cmd.CommandText += " Usu_ID as 'Codigo', ";
             cmd.CommandText += " Usu_NombreUsuario as 'Usuario', ";
             cmd.CommandText += " Usu_Contrasenia as 'Contraseña', ";
             cmd.CommandText += " Usu_ApellidoNombre as 'Apellido y Nombre', ";
@@ -129,13 +130,14 @@ namespace ClasesBase.Service
                 "Usu_Contrasenia = @pass, " +
                 "Usu_ApellidoNombre = @nya, " +
                 "Rol_Codigo = @rol " +
-                "WHERE Usu_Codigo = @codigo",
+                "WHERE Usu_ID = @codigo",
                 cnn);
 
             cmd.Parameters.AddWithValue("@usuario", user.Usu_NombreUsuario);
             cmd.Parameters.AddWithValue("@pass", user.Usu_Contrasenia);
             cmd.Parameters.AddWithValue("@nya", user.Usu_ApellidoNombre);
             cmd.Parameters.AddWithValue("@rol", user.Usu_Rol);
+            cmd.Parameters.AddWithValue("@codigo", user.Usu_ID);
 
             try
             {
@@ -153,14 +155,17 @@ namespace ClasesBase.Service
             }
         }
 
-        public static void delete_usuario(string nombreApellido)
+        public static void delete_usuario(int idUsuario)
         {
             SqlConnection cnn = new SqlConnection(
                 ClasesBase.Properties.Settings.Default.opticaConnectionString1);
+            
             SqlCommand cmd = new SqlCommand(
-                "DELETE FROM Usuario WHERE Usu_ApellidoNombre = @nya",
+                "DELETE FROM Usuario WHERE Usu_ID = @id", 
                 cnn);
-            cmd.Parameters.AddWithValue("@nya", nombreApellido);
+
+            cmd.Parameters.AddWithValue("@id", idUsuario);
+
             try
             {
                 cnn.Open();

@@ -33,25 +33,26 @@ namespace Vistas
             this.mnuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAltaCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGestionClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnConsularCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAltaProductos = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnProductosVendidos = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGestionDeProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnListadoProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnConsultarProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAltaObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnListadoObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAltaUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGestionUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRegistrarVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnListadoVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnGestionDeProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,13 +65,13 @@ namespace Vistas
             this.mnuClientes,
             this.mnuProductos,
             this.mnuObrasSociales,
-            this.usuariosToolStripMenuItem,
-            this.ventasToolStripMenuItem,
+            this.mnuUsuarios,
+            this.mnuVentas,
             this.mnuSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(761, 29);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(1015, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,7 +79,7 @@ namespace Vistas
             // 
             this.mnuSistema.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.mnuSistema.Name = "mnuSistema";
-            this.mnuSistema.Size = new System.Drawing.Size(85, 27);
+            this.mnuSistema.Size = new System.Drawing.Size(104, 33);
             this.mnuSistema.Text = "Sistema";
             // 
             // mnuClientes
@@ -86,135 +87,150 @@ namespace Vistas
             this.mnuClientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAltaCliente,
             this.btnGestionClientes,
-            this.consultarClientesToolStripMenuItem});
+            this.btnConsularCliente});
             this.mnuClientes.Font = new System.Drawing.Font("Calibri", 14F);
             this.mnuClientes.Name = "mnuClientes";
-            this.mnuClientes.Size = new System.Drawing.Size(82, 27);
+            this.mnuClientes.Size = new System.Drawing.Size(104, 33);
             this.mnuClientes.Text = "Clientes";
             // 
             // btnAltaCliente
             // 
             this.btnAltaCliente.Name = "btnAltaCliente";
-            this.btnAltaCliente.Size = new System.Drawing.Size(220, 28);
-            this.btnAltaCliente.Text = "Alta";
+            this.btnAltaCliente.Size = new System.Drawing.Size(265, 34);
+            this.btnAltaCliente.Text = "Alta de Cliente";
             this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
             // 
             // btnGestionClientes
             // 
             this.btnGestionClientes.Name = "btnGestionClientes";
-            this.btnGestionClientes.Size = new System.Drawing.Size(220, 28);
+            this.btnGestionClientes.Size = new System.Drawing.Size(265, 34);
             this.btnGestionClientes.Text = "Gestionar Clientes";
             this.btnGestionClientes.Click += new System.EventHandler(this.btnGestionClientes_Click);
             // 
-            // consultarClientesToolStripMenuItem
+            // btnConsularCliente
             // 
-            this.consultarClientesToolStripMenuItem.Name = "consultarClientesToolStripMenuItem";
-            this.consultarClientesToolStripMenuItem.Size = new System.Drawing.Size(220, 28);
-            this.consultarClientesToolStripMenuItem.Text = "Consultar Clientes";
-            this.consultarClientesToolStripMenuItem.Click += new System.EventHandler(this.consultarClientesToolStripMenuItem_Click);
+            this.btnConsularCliente.Name = "btnConsularCliente";
+            this.btnConsularCliente.Size = new System.Drawing.Size(265, 34);
+            this.btnConsularCliente.Text = "Consultar Clientes";
+            this.btnConsularCliente.Click += new System.EventHandler(this.consultarClientesToolStripMenuItem_Click);
             // 
             // mnuProductos
             // 
             this.mnuProductos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mnuProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAltaProductos,
-            this.btnProductosVendidos,
-            this.consultarProductosToolStripMenuItem,
-            this.listadoDeProductosToolStripMenuItem,
-            this.btnGestionDeProductos});
+            this.btnGestionDeProductos,
+            this.btnListadoProductos,
+            this.btnConsultarProductos});
             this.mnuProductos.Font = new System.Drawing.Font("Calibri", 14F);
             this.mnuProductos.Name = "mnuProductos";
-            this.mnuProductos.Size = new System.Drawing.Size(101, 27);
+            this.mnuProductos.Size = new System.Drawing.Size(124, 33);
             this.mnuProductos.Text = "Productos";
             // 
             // btnAltaProductos
             // 
             this.btnAltaProductos.Name = "btnAltaProductos";
-            this.btnAltaProductos.Size = new System.Drawing.Size(246, 28);
-            this.btnAltaProductos.Text = "Alta";
+            this.btnAltaProductos.Size = new System.Drawing.Size(291, 34);
+            this.btnAltaProductos.Text = "Alta de Producto";
             this.btnAltaProductos.Click += new System.EventHandler(this.btnAltaProductos_Click);
             // 
-            // btnProductosVendidos
+            // btnGestionDeProductos
             // 
-            this.btnProductosVendidos.Name = "btnProductosVendidos";
-            this.btnProductosVendidos.Size = new System.Drawing.Size(246, 28);
-            this.btnProductosVendidos.Text = "Vendidos";
-            this.btnProductosVendidos.Click += new System.EventHandler(this.btnProductosVendidos_Click);
+            this.btnGestionDeProductos.Name = "btnGestionDeProductos";
+            this.btnGestionDeProductos.Size = new System.Drawing.Size(291, 34);
+            this.btnGestionDeProductos.Text = "Gestionar Productos";
+            this.btnGestionDeProductos.Click += new System.EventHandler(this.btnGestionDeProductos_Click);
             // 
-            // consultarProductosToolStripMenuItem
+            // btnListadoProductos
             // 
-            this.consultarProductosToolStripMenuItem.Name = "consultarProductosToolStripMenuItem";
-            this.consultarProductosToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
-            this.consultarProductosToolStripMenuItem.Text = "Consultar Productos";
-            this.consultarProductosToolStripMenuItem.Click += new System.EventHandler(this.consultarProductosToolStripMenuItem_Click);
+            this.btnListadoProductos.Name = "btnListadoProductos";
+            this.btnListadoProductos.Size = new System.Drawing.Size(291, 34);
+            this.btnListadoProductos.Text = "Listado de Productos";
+            this.btnListadoProductos.Click += new System.EventHandler(this.listadoDeProductosToolStripMenuItem_Click);
             // 
-            // listadoDeProductosToolStripMenuItem
+            // btnConsultarProductos
             // 
-            this.listadoDeProductosToolStripMenuItem.Name = "listadoDeProductosToolStripMenuItem";
-            this.listadoDeProductosToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
-            this.listadoDeProductosToolStripMenuItem.Text = "Listado de Productos";
-            this.listadoDeProductosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeProductosToolStripMenuItem_Click);
+            this.btnConsultarProductos.Name = "btnConsultarProductos";
+            this.btnConsultarProductos.Size = new System.Drawing.Size(291, 34);
+            this.btnConsultarProductos.Text = "Consultar Productos";
+            this.btnConsultarProductos.Click += new System.EventHandler(this.consultarProductosToolStripMenuItem_Click);
             // 
             // mnuObrasSociales
             // 
             this.mnuObrasSociales.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mnuObrasSociales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnAltaObrasSociales});
+            this.btnAltaObrasSociales,
+            this.btnListadoObrasSociales});
             this.mnuObrasSociales.Font = new System.Drawing.Font("Calibri", 14F);
             this.mnuObrasSociales.Name = "mnuObrasSociales";
-            this.mnuObrasSociales.Size = new System.Drawing.Size(134, 27);
+            this.mnuObrasSociales.Size = new System.Drawing.Size(167, 33);
             this.mnuObrasSociales.Text = "Obras Sociales";
             // 
             // btnAltaObrasSociales
             // 
             this.btnAltaObrasSociales.Name = "btnAltaObrasSociales";
-            this.btnAltaObrasSociales.Size = new System.Drawing.Size(110, 28);
-            this.btnAltaObrasSociales.Text = "Alta";
+            this.btnAltaObrasSociales.Size = new System.Drawing.Size(334, 34);
+            this.btnAltaObrasSociales.Text = "Alta de Obra Social";
             this.btnAltaObrasSociales.Click += new System.EventHandler(this.btnAltaObrasSociales_Click);
             // 
-            // usuariosToolStripMenuItem
+            // btnListadoObrasSociales
             // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnUsuarios});
-            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 14F);
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(90, 27);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.btnListadoObrasSociales.Name = "btnListadoObrasSociales";
+            this.btnListadoObrasSociales.Size = new System.Drawing.Size(334, 34);
+            this.btnListadoObrasSociales.Text = "Listado de Obras Sociales";
+            this.btnListadoObrasSociales.Click += new System.EventHandler(this.btnListadoObrasSociales_Click);
             // 
-            // btnUsuarios
+            // mnuUsuarios
             // 
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(180, 28);
-            this.btnUsuarios.Text = "Op. Usuarios";
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            this.mnuUsuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAltaUsuario,
+            this.btnGestionUsuarios});
+            this.mnuUsuarios.Font = new System.Drawing.Font("Calibri", 14F);
+            this.mnuUsuarios.Name = "mnuUsuarios";
+            this.mnuUsuarios.Size = new System.Drawing.Size(110, 33);
+            this.mnuUsuarios.Text = "Usuarios";
             // 
-            // ventasToolStripMenuItem
+            // btnAltaUsuario
             // 
-            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.regVentasToolStripMenuItem,
-            this.listadoDeVentasToolStripMenuItem});
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(71, 27);
-            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.btnAltaUsuario.Name = "btnAltaUsuario";
+            this.btnAltaUsuario.Size = new System.Drawing.Size(271, 34);
+            this.btnAltaUsuario.Text = "Alta de Usuario";
+            this.btnAltaUsuario.Click += new System.EventHandler(this.btnAltaUsuario_Click);
             // 
-            // regVentasToolStripMenuItem
+            // btnGestionUsuarios
             // 
-            this.regVentasToolStripMenuItem.Name = "regVentasToolStripMenuItem";
-            this.regVentasToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.regVentasToolStripMenuItem.Text = "Reg. Ventas";
-            this.regVentasToolStripMenuItem.Click += new System.EventHandler(this.regVentasToolStripMenuItem_Click);
+            this.btnGestionUsuarios.Name = "btnGestionUsuarios";
+            this.btnGestionUsuarios.Size = new System.Drawing.Size(271, 34);
+            this.btnGestionUsuarios.Text = "Gestionar Usuarios";
+            this.btnGestionUsuarios.Click += new System.EventHandler(this.btnGestionUsuarios_Click);
             // 
-            // listadoDeVentasToolStripMenuItem
+            // mnuVentas
             // 
-            this.listadoDeVentasToolStripMenuItem.Name = "listadoDeVentasToolStripMenuItem";
-            this.listadoDeVentasToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.listadoDeVentasToolStripMenuItem.Text = "Listado de Ventas";
-            this.listadoDeVentasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeVentasToolStripMenuItem_Click);
+            this.mnuVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnRegistrarVentas,
+            this.btnListadoVentas});
+            this.mnuVentas.Name = "mnuVentas";
+            this.mnuVentas.Size = new System.Drawing.Size(85, 33);
+            this.mnuVentas.Text = "Ventas";
+            // 
+            // btnRegistrarVentas
+            // 
+            this.btnRegistrarVentas.Name = "btnRegistrarVentas";
+            this.btnRegistrarVentas.Size = new System.Drawing.Size(243, 32);
+            this.btnRegistrarVentas.Text = "Registrar Venta";
+            this.btnRegistrarVentas.Click += new System.EventHandler(this.regVentasToolStripMenuItem_Click);
+            // 
+            // btnListadoVentas
+            // 
+            this.btnListadoVentas.Name = "btnListadoVentas";
+            this.btnListadoVentas.Size = new System.Drawing.Size(243, 32);
+            this.btnListadoVentas.Text = "Listado de Ventas";
+            this.btnListadoVentas.Click += new System.EventHandler(this.listadoDeVentasToolStripMenuItem_Click);
             // 
             // mnuSalir
             // 
             this.mnuSalir.Name = "mnuSalir";
-            this.mnuSalir.Size = new System.Drawing.Size(53, 27);
+            this.mnuSalir.Size = new System.Drawing.Size(63, 33);
             this.mnuSalir.Text = "Salir";
             this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
             // 
@@ -222,10 +238,9 @@ namespace Vistas
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(637, 302);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(849, 372);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(67, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(83, 27);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -233,10 +248,9 @@ namespace Vistas
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(637, 328);
-            this.lblRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRol.Location = new System.Drawing.Point(849, 404);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(34, 22);
+            this.lblRol.Size = new System.Drawing.Size(41, 27);
             this.lblRol.TabIndex = 2;
             this.lblRol.Text = "Rol";
             // 
@@ -244,10 +258,9 @@ namespace Vistas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(565, 302);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(753, 372);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 22);
+            this.label1.Size = new System.Drawing.Size(89, 27);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario:";
             // 
@@ -255,32 +268,24 @@ namespace Vistas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(565, 328);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(753, 404);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 22);
+            this.label2.Size = new System.Drawing.Size(47, 27);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol:";
             // 
-            // btnGestionDeProductos
-            // 
-            this.btnGestionDeProductos.Name = "btnGestionDeProductos";
-            this.btnGestionDeProductos.Size = new System.Drawing.Size(246, 28);
-            this.btnGestionDeProductos.Text = "Gestion de Productos";
-            this.btnGestionDeProductos.Click += new System.EventHandler(this.btnGestionDeProductos_Click);
-            // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 363);
+            this.ClientSize = new System.Drawing.Size(1015, 447);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
@@ -306,17 +311,18 @@ namespace Vistas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem mnuSalir;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btnUsuarios;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listadoDeVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem btnAltaUsuario;
+        private System.Windows.Forms.ToolStripMenuItem mnuVentas;
+        private System.Windows.Forms.ToolStripMenuItem btnRegistrarVentas;
+        private System.Windows.Forms.ToolStripMenuItem btnListadoVentas;
         private System.Windows.Forms.ToolStripMenuItem btnGestionClientes;
-        private System.Windows.Forms.ToolStripMenuItem btnProductosVendidos;
-        private System.Windows.Forms.ToolStripMenuItem consultarProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listadoDeProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnConsultarProductos;
+        private System.Windows.Forms.ToolStripMenuItem btnConsularCliente;
+        private System.Windows.Forms.ToolStripMenuItem btnListadoProductos;
         private System.Windows.Forms.ToolStripMenuItem btnGestionDeProductos;
+        private System.Windows.Forms.ToolStripMenuItem btnGestionUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem btnListadoObrasSociales;
     }
 }
 

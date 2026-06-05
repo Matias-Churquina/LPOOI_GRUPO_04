@@ -46,7 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegistrarVenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opticaDataSetBindingSource1)).BeginInit();
@@ -63,7 +63,6 @@
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(269, 24);
             this.cmbCliente.TabIndex = 0;
-            this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // opticaDataSet
             // 
@@ -213,23 +212,23 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Producto";
             // 
-            // button1
+            // btnRegistrarVenta
             // 
-            this.button1.Location = new System.Drawing.Point(334, 429);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(334, 429);
+            this.btnRegistrarVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrarVenta.Name = "btnRegistrarVenta";
+            this.btnRegistrarVenta.Size = new System.Drawing.Size(124, 30);
+            this.btnRegistrarVenta.TabIndex = 4;
+            this.btnRegistrarVenta.Text = "Registrar";
+            this.btnRegistrarVenta.UseVisualStyleBackColor = true;
+            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
             // FrmRegVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 469);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegistrarVenta);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -267,6 +266,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nupCantidad;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistrarVenta;
     }
 }
