@@ -212,3 +212,6 @@ C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmConsult
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.FrmGestionUsuarios.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.AltaUsuario.resources
 C:\Users\Abigail\Documents\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.ListadoObrasSociales.resources
+C:\Users\admin\Documents\heare\LPOOI_GRUPO_04\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\admin\Documents\heare\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\admin\Documents\heare\LPOOI_GRUPO_04\Vistas\obj\x86\Debug\Vistas.pdb

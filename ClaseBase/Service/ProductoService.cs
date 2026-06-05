@@ -126,26 +126,14 @@ namespace ClasesBase.Service
         public static DataTable ObtenerProductosOrdenados(string criterioOrden)
         {
             DataTable dt = new DataTable();
-
-            // Reemplaza esto con el nombre exacto de tu cadena de conexión
-            string cadenaConexion = Properties.Settings.Default.opticaConnectionString1;
+              string cadenaConexion = Properties.Settings.Default.opticaConnectionString1;
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
-                // Armamos la consulta base
-                string consulta = "SELECT * FROM Producto";
+                SqlCommand comando = new SqlCommand("sp_ObtenerProductosOrdenados", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
 
-                // Concatenamos el ORDER BY dependiendo de lo que elija el usuario
-                if (criterioOrden == "Categoria")
-                {
-                    consulta += " ORDER BY Prod_Categoria ASC";
-                }
-                else
-                {
-                    consulta += " ORDER BY Prod_Descripcion ASC";
-                }
-
-                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@criterio", criterioOrden);
 
                 try
                 {
